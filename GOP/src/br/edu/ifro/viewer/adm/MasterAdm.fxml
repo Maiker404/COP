@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1080.0" stylesheets="@../../css/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.adm.MasterAdmController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="parent" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="580.0" prefWidth="149.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="447.0" prefWidth="149.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../image/Logo.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="15.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <HBox alignment="CENTER" onMouseClicked="#loadDash" prefHeight="65.0" prefWidth="149.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <FontAwesomeIcon glyphStyle="-fx-fill: #dff9fb;" glyphStyleClass="" iconName="DASHBOARD" size="2em" wrappingWidth="26.0" />
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="86.0" styleClass="color-sidebar" text="Dashboard" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" top="5.0" />
+                                 </VBox.margin>
+                                 <styleClass>
+                                    <String fx:value="buttons-sidebar" />
+                                    <String fx:value="cursor-hand" />
+                                 </styleClass>
+                              </HBox>
+                              <HBox alignment="CENTER" onMouseClicked="#loadProject" prefHeight="65.0" prefWidth="149.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <FontAwesomeIcon glyphStyle="-fx-fill: #dff9fb;" glyphStyleClass="" iconName="TH_LIST" size="2em" wrappingWidth="26.0" />
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="89.0" styleClass="color-sidebar" text="Projetos" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" top="5.0" />
+                                 </VBox.margin>
+                                 <styleClass>
+                                    <String fx:value="buttons-sidebar" />
+                                    <String fx:value="cursor-hand" />
+                                 </styleClass>
+                              </HBox>
+                              <HBox alignment="CENTER" onMouseClicked="#loadUser" prefHeight="65.0" prefWidth="149.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <FontAwesomeIcon glyphStyle="-fx-fill: #dff9fb;" glyphStyleClass="" iconName="USER" size="2em" wrappingWidth="26.0" />
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="90.0" styleClass="color-sidebar" text="Usuarios" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" top="5.0" />
+                                 </VBox.margin>
+                                 <styleClass>
+                                    <String fx:value="buttons-sidebar" />
+                                    <String fx:value="cursor-hand" />
+                                 </styleClass>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="67.0" prefWidth="149.0">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox onMouseClicked="#CloseWindow" prefHeight="60.0" prefWidth="149.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <FontAwesomeIcon glyphStyle="-fx-fill: #dff9fb;" iconName="ARROW_CIRCLE_LEFT" size="2em" wrappingWidth="26.0" />
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="74.0" styleClass="color-sidebar" text="Exit" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="buttons-sidebar" />
+                                    <String fx:value="cursor-hand" />
+                                 </styleClass>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="0.0" prefWidth="1080.0" styleClass="title-pane" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="TOP_RIGHT" prefHeight="27.0" prefWidth="51.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#minimizeWindow">
+                           <graphic>
+                              <FontAwesomeIcon glyphStyle="-fx-fill:white;" iconName="MINUS" size="1.5em" />
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="buttons-window" />
+                              <String fx:value="cursor-hand" />
+                           </styleClass>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeWindow" prefHeight="20.0" prefWidth="20.0">
+                           <graphic>
+                              <FontAwesomeIcon glyphStyle="-fx-fill:white;" iconName="CLOSE" size="1.5em" wrappingWidth="15.142857551574707" />
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="buttons-window" />
+                              <String fx:value="cursor-hand" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets top="1.0" />
+                     </padding>
+                  </HBox>
+                  <Label prefHeight="27.0" prefWidth="150.0" text="Gerencias" textFill="#dff9fb" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="930.0" AnchorPane.topAnchor="0.0">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

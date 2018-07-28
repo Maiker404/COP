@@ -1,0 +1,47 @@
+/*Campos de preenchimento*/
+.jfx-text-field, .jfx-password-field,.jfx-text-area{
+	-fx-prompt-text-fill:white;
+	-fx-text-fill:white;
+	-jfx-focus-color:black;
+	-jfx-unfocus-color:white;
+        -jfx-label-float:true;
+}
+/*Cursores*/
+.cursor-hand{
+    -fx-cursor: hand;
+        
+}
+/*Layout da janela*/
+.sidebar{
+    -fx-background-color: #30336b;
+}
+.parent{
+    -fx-background-color: #95afc0;
+}
+.title-pane{
+    -fx-background-color: #130f40;
+}
+/*Cores*/
+.color-sidebar{
+    -fx-text-fill: #dff9fb;
+}
+/*Clicaveis*/
+.buttons-sidebar{
+    -fx-hbar-policy: always;
+    -fx-border-radius: 0%;
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+}
+.buttons-sidebar:hover{
+    -fx-border-color: #130f40;
+    -fx-border-style: solid;
+    -fx-border-width: 0px 0px 0px 3px;
+    -fx-background-color: #95afc0;
+}
+.buttons-window{
+    -fx-hbar-policy: always;
+    -fx-alignment: center;
+    -fx-border-radius: 0%;
+    -fx-background-color: transparent;
+}
+
