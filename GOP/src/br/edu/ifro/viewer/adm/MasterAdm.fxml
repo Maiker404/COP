@@ -15,85 +15,20 @@
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="parent" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <VBox alignment="TOP_CENTER" prefHeight="580.0" prefWidth="149.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+            <VBox alignment="TOP_CENTER" prefHeight="553.0" prefWidth="120.0" styleClass="sidebar" BorderPane.alignment="CENTER">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="116.0">
                      <children>
-                        <VBox alignment="TOP_CENTER" prefHeight="447.0" prefWidth="149.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
-                                 <image>
-                                    <Image url="@../../image/Logo.png" />
-                                 </image>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" top="15.0" />
-                                 </VBox.margin>
-                              </ImageView>
-                              <HBox alignment="CENTER" onMouseClicked="#loadDash" prefHeight="65.0" prefWidth="149.0" VBox.vgrow="NEVER">
-                                 <children>
-                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="168.0" styleClass="buttons-sidebar" text="Button" HBox.hgrow="SOMETIMES">
-                                       <graphic>
-                                          <FontAwesomeIcon glyphStyle="-fx-fill: #dff9fb;" glyphStyleClass="" iconName="DASHBOARD" size="2em" wrappingWidth="26.0" />
-                                       </graphic>
-                                       <padding>
-                                          <Insets left="-50.0" />
-                                       </padding>
-                                    </Button>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="3.0" top="5.0" />
-                                 </VBox.margin>
-                                 <styleClass>
-                                    <String fx:value="buttons-sidebar" />
-                                    <String fx:value="cursor-hand" />
-                                 </styleClass>
-                              </HBox>
-                              <HBox alignment="CENTER" onMouseClicked="#loadProject" prefHeight="65.0" prefWidth="149.0" VBox.vgrow="NEVER">
-                                 <children>
-                                    <FontAwesomeIcon glyphStyle="-fx-fill: #dff9fb;" glyphStyleClass="" iconName="TH_LIST" size="2em" wrappingWidth="26.0" />
-                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="89.0" styleClass="color-sidebar" text="Projetos" />
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="3.0" top="5.0" />
-                                 </VBox.margin>
-                                 <styleClass>
-                                    <String fx:value="buttons-sidebar" />
-                                    <String fx:value="cursor-hand" />
-                                 </styleClass>
-                              </HBox>
-                              <HBox alignment="CENTER" onMouseClicked="#loadUser" prefHeight="65.0" prefWidth="149.0" VBox.vgrow="NEVER">
-                                 <children>
-                                    <FontAwesomeIcon glyphStyle="-fx-fill: #dff9fb;" glyphStyleClass="" iconName="USER" size="2em" wrappingWidth="26.0" />
-                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="90.0" styleClass="color-sidebar" text="Usuarios" />
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="3.0" top="5.0" />
-                                 </VBox.margin>
-                                 <styleClass>
-                                    <String fx:value="buttons-sidebar" />
-                                    <String fx:value="cursor-hand" />
-                                 </styleClass>
-                              </HBox>
-                           </children>
-                        </VBox>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../../image/Logo.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </HBox>
-                  <HBox prefHeight="67.0" prefWidth="149.0">
+                  <HBox alignment="TOP_CENTER" fillHeight="false" layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="120.0">
                      <children>
-                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <HBox onMouseClicked="#CloseWindow" prefHeight="60.0" prefWidth="149.0" VBox.vgrow="ALWAYS">
-                                 <children>
-                                    <FontAwesomeIcon glyphStyle="-fx-fill: #dff9fb;" iconName="ARROW_CIRCLE_LEFT" size="2em" wrappingWidth="26.0" />
-                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="74.0" styleClass="color-sidebar" text="Exit" />
-                                 </children>
-                                 <styleClass>
-                                    <String fx:value="buttons-sidebar" />
-                                    <String fx:value="cursor-hand" />
-                                 </styleClass>
-                              </HBox>
-                           </children>
-                        </VBox>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" styleClass="buttons-sidebar" text="Button" HBox.hgrow="NEVER" />
                      </children>
                   </HBox>
                </children>
@@ -134,7 +69,7 @@
                         <Insets top="1.0" />
                      </padding>
                   </HBox>
-                  <Label prefHeight="27.0" prefWidth="150.0" text="Gerencias" textFill="#dff9fb" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="930.0" AnchorPane.topAnchor="0.0">
+                  <Label prefHeight="27.0" prefWidth="150.0" styleClass="title-pane-label" text="Gerencias" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="930.0" AnchorPane.topAnchor="0.0">
                      <padding>
                         <Insets left="15.0" />
                      </padding>
