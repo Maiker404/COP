@@ -12,7 +12,7 @@ public class App extends Application {
     private double x,y;
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("viewer/adm/MasterAdm.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("viewer/adm/CadastroUsuario.fxml"));
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         root.setOnMousePressed(new EventHandler<MouseEvent>() {

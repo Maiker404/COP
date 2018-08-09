@@ -45,6 +45,12 @@ public class CadastroUsuarioController implements Initializable {
     private JFXTextField txtFuncao;
     @FXML
     private JFXListView<?> listView;
+    @FXML
+    private JFXTextField txtEnd;
+    @FXML
+    private JFXTextField txtCpf;
+    @FXML
+    private JFXTextField txtDataNasc;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -58,24 +64,24 @@ public class CadastroUsuarioController implements Initializable {
 //        EntityManager em = emf.createEntityManager();
 //        Query query = em.createQuery("SELECT u FROM Usuario as u");
 //        List<Usuario> user = query.getResultList();
-        List<AnchorPane> itens = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            AnchorPane an=new AnchorPane();
-            an.setPrefSize(320, 50);
-            Pane pn=new Pane();
-            pn.setPrefSize(320, 50);
-            pn.setStyle("-fx-background-color:#797a7c;");
-            Label l=new Label("Usuario "+i);
-            l.setPrefSize(200, 50);
-            l.setLayoutX(70);
-            l.setLayoutY(0);
-            //                ImageView i=new ImageView(new Image("/br/edu/ifro/image/Logo.png"));
-            pn.getChildren().add(l);
-            an.getChildren().add(pn);
-            itens.add(an);
-        }
-        ObservableList us = FXCollections.observableArrayList(itens);
-        CadastroUsuarioController.this.listView.setItems(us);
+//        List<AnchorPane> itens = new ArrayList<>();
+//        for (int i = 0; i < 10; i++) {
+//            AnchorPane an=new AnchorPane();
+//            an.setPrefSize(320, 50);
+//            Pane pn=new Pane();
+//            pn.setPrefSize(320, 50);
+//            pn.setStyle("-fx-background-color:#797a7c;");
+//            Label l=new Label("Usuario "+i);
+//            l.setPrefSize(200, 50);
+//            l.setLayoutX(70);
+//            l.setLayoutY(0);
+//            //                ImageView i=new ImageView(new Image("/br/edu/ifro/image/Logo.png"));
+//            pn.getChildren().add(l);
+//            an.getChildren().add(pn);
+//            itens.add(an);
+//        }
+//        ObservableList us = FXCollections.observableArrayList(itens);
+//        CadastroUsuarioController.this.listView.setItems(us);
     }
 
     @FXML
@@ -84,6 +90,9 @@ public class CadastroUsuarioController implements Initializable {
         EntityManager em = emf.createEntityManager();
         Usuario u = new Usuario();
         u.setUser(txtUser.getText());
+        u.setCpf(txtCpf.getText());
+        u.setEnd(txtEnd.getText());
+        u.setDatanasc(txtDataNasc.getText());
         u.setSenha(txtPass.getText());
         u.setPermisao(cbxPerm.getSelectionModel().getSelectedItem().toString());
         u.setNome(txtNome.getText());
