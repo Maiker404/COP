@@ -22,6 +22,13 @@ public class Usuario {
     private String sobrenome;
     @Column
     private String funcao;
+    @Column
+    private String cpf;
+    @Column
+    private String datanasc;
+    @Column
+    private String end;
+    
     
     public String getPermisao() {
         return permisao;
@@ -64,5 +71,29 @@ public class Usuario {
     }
     public void setFuncao(String funcao) {
         this.funcao = funcao;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getDatanasc() {
+        return datanasc;
+    }
+
+    public void setDatanasc(String datanasc) {
+        this.datanasc = datanasc;
+    }
+
+    public String getEnd() {
+        return end;
+    }
+
+    public void setEnd(String end) {
+        this.end = end;
     }
 }
