@@ -35,8 +35,9 @@
 .buttons-sidebar:hover{
     -fx-border-color: #130f40;
     -fx-border-style: solid;
-    -fx-border-width: 0px 0px 0px 3px;
-    -fx-background-color: #95afc0;
+    -fx-border-width: 0px 0px 0px 1px;
+    -fx-text-fill: #130f40;
+    -fx-background-color: #ffffff;
 }
 .buttons-window{
     -fx-hbar-policy: always;

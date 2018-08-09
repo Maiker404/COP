@@ -31,8 +31,14 @@
                               </ImageView>
                               <HBox alignment="CENTER" onMouseClicked="#loadDash" prefHeight="65.0" prefWidth="149.0" VBox.vgrow="NEVER">
                                  <children>
-                                    <FontAwesomeIcon glyphStyle="-fx-fill: #dff9fb;" glyphStyleClass="" iconName="DASHBOARD" size="2em" wrappingWidth="26.0" />
-                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="86.0" styleClass="color-sidebar" text="Dashboard" />
+                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="168.0" styleClass="buttons-sidebar" text="Button" HBox.hgrow="SOMETIMES">
+                                       <graphic>
+                                          <FontAwesomeIcon glyphStyle="-fx-fill: #dff9fb;" glyphStyleClass="" iconName="DASHBOARD" size="2em" wrappingWidth="26.0" />
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="-50.0" />
+                                       </padding>
+                                    </Button>
                                  </children>
                                  <VBox.margin>
                                     <Insets bottom="3.0" top="5.0" />
