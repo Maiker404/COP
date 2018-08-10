@@ -12,6 +12,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -24,6 +26,8 @@ import javafx.scene.layout.StackPane;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import org.hibernate.boot.internal.MetadataImpl;
+import org.hibernate.mapping.Map;
 
 public class CadastroUsuarioController implements Initializable {
 
@@ -104,7 +108,8 @@ public class CadastroUsuarioController implements Initializable {
         try {
             em.persist(u);
             body.setText("Cadastro realizado!");
-            body.setStyle("-fx-text-color:#660066;");
+            body.setStyle("-fx-text-color:#000;");
+            content.setStyle("-fx-background-color: green;");
             content.setBody(body);
         } catch (Exception ex) {
             Pane p=new Gerador().headPane("ERRO","/br/edu/ifro/image/alerta.png","-fx-text-color:black;", "-fx-background-color:white;");
@@ -115,7 +120,7 @@ public class CadastroUsuarioController implements Initializable {
         }
         try {em.getTransaction().commit();} catch (Exception ex) {}
         JFXDialog diag = new JFXDialog(this.stackP, content, JFXDialog.DialogTransition.TOP);
-            diag.show();
+        diag.show();
     }
 
     @FXML
