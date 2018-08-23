@@ -44,7 +44,7 @@
          <top>
             <AnchorPane prefHeight="0.0" prefWidth="1080.0" styleClass="title-pane" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="TOP_RIGHT" prefHeight="27.0" prefWidth="51.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="51.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#minimizeWindow">
                            <graphic>

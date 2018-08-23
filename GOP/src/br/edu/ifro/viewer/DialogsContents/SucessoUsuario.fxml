@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import com.jfoenix.controls.*?>
@@ -10,16 +12,27 @@
 <?import javafx.scene.layout.*?>
 
 
-<JFXDialogLayout alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<JFXDialogLayout alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="378.0" styleClass="success-pane" stylesheets="@../../css/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox alignment="CENTER_LEFT" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="300.0" spacing="20.0">
+      <HBox alignment="CENTER" prefHeight="75.0" prefWidth="364.0" spacing="10.0">
          <children>
-            <FontAwesomeIcon glyphStyle="-fx-fill:green" iconName="OKAY" size="3em" text="" />
-            <Label text="Cadastro de Usuario feito com sucesso!" />
+            <FontAwesomeIcon fill="#0aae0f" iconName="CHECK" size="2.5em">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </FontAwesomeIcon>
+            <Label alignment="CENTER" prefHeight="23.0" prefWidth="259.0" styleClass="label-success" text="Alteração salva com sucesso!" textFill="#292c29" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
          </children>
-         <padding>
-            <Insets left="20.0" />
-         </padding>
       </HBox>
    </children>
+   <effect>
+      <DropShadow blurType="GAUSSIAN" color="#000000d3" height="30.0" offsetX="2.0" offsetY="3.0" radius="14.5" spread="0.04" width="30.0" />
+   </effect>
 </JFXDialogLayout>
