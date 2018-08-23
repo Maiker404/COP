@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="718.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <JFXTextField layoutX="32.0" layoutY="55.0" prefHeight="25.0" prefWidth="213.0" promptText="Pesquisa" />
+      <JFXButton contentDisplay="CENTER" layoutX="246.0" layoutY="51.0" prefHeight="32.0" prefWidth="47.0" text=" ">
+         <graphic>
+            <FontAwesomeIcon iconName="SEARCH" size="1.5em" text="" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="CENTER" layoutX="624.0" layoutY="51.0" prefHeight="32.0" prefWidth="47.0" text=" ">
+         <graphic>
+            <FontAwesomeIcon iconName="SEARCH" size="1.5em" text="" />
+         </graphic>
+      </JFXButton>
+      <JFXListView layoutX="32.0" layoutY="91.0" prefHeight="331.0" prefWidth="268.0" />
+      <JFXListView layoutX="403.0" layoutY="91.0" prefHeight="331.0" prefWidth="268.0" />
+      <JFXTextField layoutX="403.0" layoutY="54.0" prefHeight="25.0" prefWidth="213.0" promptText="Pesquisa" />
+      <JFXButton contentDisplay="CENTER" layoutX="234.0" layoutY="432.0" prefHeight="32.0" prefWidth="0.0" text=" ">
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:green" iconName="PLUS" size="2em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="CENTER" layoutX="403.0" layoutY="432.0" prefHeight="32.0" prefWidth="30.0" text=" ">
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:red" iconName="CLOSE" size="2em" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="CENTER" layoutX="314.0" layoutY="464.0" prefHeight="32.0" prefWidth="30.0" text=" " />
+      <FontAwesomeIcon glyphStyle="-fx-fill:blue" iconName="SAVE" layoutX="329.0" layoutY="547.0" size="5em" />
+      <HBox alignment="TOP_RIGHT" layoutX="648.0" layoutY="8.0" prefHeight="27.0" prefWidth="51.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#minimizeWindow" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIcon iconName="MINUS" size="1.5em" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="buttons-window" />
+                  <String fx:value="cursor-hand" />
+               </styleClass>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeWindow" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: trasnparent;">
+               <graphic>
+                  <FontAwesomeIcon iconName="CLOSE" size="1.5em" wrappingWidth="15.142857551574707" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="buttons-window" />
+                  <String fx:value="cursor-hand" />
+               </styleClass>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="1.0" />
+         </padding>
+      </HBox>
+      <Label layoutX="32.0" layoutY="13.0" text="Edição de equipe" />
+   </children>
+</AnchorPane>

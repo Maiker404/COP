@@ -8,13 +8,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="457.0" prefWidth="698.0" style="-fx-background-color: pink;" stylesheets="@../../css/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.adm.CadastroProjetoController">
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="960.0" style="-fx-background-color: pink;" stylesheets="@../../css/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.adm.CadastroProjetoController">
    <children>
       <Label layoutX="28.0" layoutY="6.0" text="Cadastro de projeto" textFill="WHITE" />
-      <JFXTextField layoutX="28.0" layoutY="49.0" prefHeight="25.0" prefWidth="630.0" promptText="Nome do projeto" />
-      <JFXTextField layoutX="28.0" layoutY="99.0" prefHeight="25.0" prefWidth="630.0" promptText="Data de entrega" />
-      <JFXTextArea layoutX="31.0" layoutY="145.0" prefHeight="78.0" prefWidth="630.0" promptText="Descrição" />
-      <JFXButton layoutX="575.0" layoutY="283.0" prefHeight="54.0" prefWidth="83.0" text="Novo" />
-      <JFXButton layoutX="555.0" layoutY="355.0" prefHeight="62.0" prefWidth="106.0" text="Cadastrar" />
+      <JFXTextField layoutX="28.0" layoutY="49.0" prefHeight="25.0" prefWidth="381.0" promptText="Nome do projeto" />
+      <JFXTextField layoutX="28.0" layoutY="99.0" prefHeight="25.0" prefWidth="381.0" promptText="Data de entrega" />
+      <JFXTextArea layoutX="31.0" layoutY="145.0" prefHeight="78.0" prefWidth="381.0" promptText="Descrição" />
+      <JFXButton layoutX="40.0" layoutY="434.0" prefHeight="54.0" prefWidth="83.0" text="Novo" />
+      <JFXButton layoutX="28.0" layoutY="303.0" prefHeight="62.0" prefWidth="106.0" text="Salvar" />
+      <JFXButton layoutX="28.0" layoutY="365.0" prefHeight="62.0" prefWidth="106.0" text="Equipe" />
+      <Label layoutX="499.0" layoutY="6.0" text="Equipe" textFill="WHITE" />
+      <JFXListView layoutX="499.0" layoutY="34.0" prefHeight="212.0" prefWidth="433.0" />
+      <Label layoutX="499.0" layoutY="275.0" text="Gerenciador" textFill="WHITE" />
+      <JFXListView layoutX="499.0" layoutY="304.0" prefHeight="206.0" prefWidth="433.0" />
    </children>
 </AnchorPane>
