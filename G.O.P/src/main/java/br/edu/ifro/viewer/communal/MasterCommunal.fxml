@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.communal.MasterCommunalController">
+   <children>
+      <Pane layoutX="-250.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1080.0" style="-fx-background-color: #797a7c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="painel" prefHeight="590.0" prefWidth="1090.0" />
+            <JFXDrawer fx:id="nav" defaultDrawerSize="250.0" layoutX="-250.0" overLayVisible="false" prefHeight="590.0" prefWidth="250.0" />
+            <JFXHamburger fx:id="hamburg" layoutX="14.0" layoutY="14.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
