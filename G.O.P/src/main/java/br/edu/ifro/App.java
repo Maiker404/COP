@@ -1,4 +1,5 @@
 package br.edu.ifro;
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +13,7 @@ public class App extends Application {
     private double x,y;
     @Override
     public void start(final Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("viewer/adm/EdicaoEquipe.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/br/edu/ifro/viewer/Login.fxml"));
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
@@ -36,6 +37,10 @@ public class App extends Application {
         stage.show();
     }
     public static void main(String[] args) {
+//        try{   
+//           Process p = Runtime.getRuntime().exec("/src/main/resources/redis-server.exe");
+//        }catch(IOException e){   
+//        };
         launch(args);
     }
 }
