@@ -10,8 +10,16 @@
 AnchorPane{
     -fx-background-color: #dddddd;
 }
-JFXTextField,JFXPasswordField{
+JFXTextField,JFXPasswordField,JFXTextArea,JFXComboBox{
     -jfx-focus-color:#212121;
     -jfx-unfocus-color:#353535;
     -fx-text-fill: #212121;
+}
+.hoverBtnMenu{
+    -fx-text-fill: white;
+}
+.hoverBtnMenu:hover{
+    -fx-border-radius: 5px;
+    -fx-border-color: #353535;
+    -fx-text-fill: #353535;
 }

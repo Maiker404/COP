@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
-<?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -10,9 +10,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="anchor" prefHeight="590.0" prefWidth="718.0" style="-fx-border-radius: 30px;" styleClass="parent-time" stylesheets="@../../css/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.adm.EdicaoEquipeController">
+<AnchorPane id="anchor" prefHeight="590.0" prefWidth="718.0" styleClass="parent-time" stylesheets="@../../css/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.adm.EdicaoEquipeController">
    <children>
-      <AnchorPane prefHeight="30.0" prefWidth="718.0" style="-fx-background-color: #2c3e50;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="30.0" prefWidth="718.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label layoutX="20.0" prefHeight="30.0" prefWidth="191.0" styleClass="label-edit-time" text="Edição de equipe" />
             <HBox alignment="TOP_RIGHT" fillHeight="false" layoutX="653.0" prefHeight="30.0" prefWidth="51.0" AnchorPane.rightAnchor="0.0">
@@ -20,53 +20,41 @@
                   <Insets top="1.0" />
                </padding>
                <children>
-                  <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="32.0" prefWidth="47.0" ripplerFill="#82a1bf" styleClass="cursor-hand" text=" " onAction="#Mini">
+                  <JFXButton contentDisplay="CENTER" onAction="#Mini" prefHeight="32.0" prefWidth="47.0" ripplerFill="#98a2ab" styleClass="cursor-hand" text=" ">
                      <graphic>
-                        <FontAwesomeIcon iconName="MINUS" size="1.7em" styleClass="glyph-style" />
-                     </graphic>
-                     <HBox.margin>
-                        <Insets right="3.0" />
-                     </HBox.margin>
-                  </JFXButton>
-                  <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="32.0" prefWidth="47.0" ripplerFill="#82a1bf" styleClass="cursor-hand" text=" " onAction="#Sair">
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#353535" iconName="MINUS" size="1.5em" />
+                     </graphic></JFXButton>
+                  <JFXButton contentDisplay="CENTER" onAction="#Sair" prefHeight="32.0" prefWidth="47.0" ripplerFill="#98a2ab" styleClass="cursor-hand" text=" ">
                      <graphic>
-                        <FontAwesomeIcon iconName="CLOSE" size="1.7em" styleClass="glyph-style" />
-                     </graphic>
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </JFXButton>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#353535" iconName="CLOSE" size="1.5em" />
+                     </graphic></JFXButton>
                </children>
             </HBox>
          </children>
       </AnchorPane>
       <JFXTextField focusColor="WHITE" layoutX="32.0" layoutY="55.0" prefHeight="25.0" prefWidth="213.0" styleClass="jtextfield" unFocusColor="WHITE" />
       <JFXTextField focusColor="WHITE" layoutX="403.0" layoutY="54.0" prefHeight="25.0" prefWidth="213.0" styleClass="jtextfield" unFocusColor="WHITE" />
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="255.0" layoutY="50.0" prefHeight="32.0" prefWidth="47.0" ripplerFill="#82a1bf" styleClass="cursor-hand" text=" ">
+      <JFXButton contentDisplay="CENTER" layoutX="255.0" layoutY="52.0" prefHeight="32.0" prefWidth="47.0" ripplerFill="#c1c9d0" style="-fx-background-color: #5d5d5d;" text=" ">
          <graphic>
-            <FontAwesomeIcon iconName="SEARCH" size="1.5em" styleClass="glyph-style" text="" />
-         </graphic>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="633.0" layoutY="50.0" prefHeight="32.0" prefWidth="47.0" ripplerFill="#82a1bf" styleClass="cursor-hand" text=" ">
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="SEARCH" size="1.7em" />
+         </graphic></JFXButton>
+      <JFXButton contentDisplay="CENTER" layoutX="624.0" layoutY="50.0" prefHeight="32.0" prefWidth="47.0" ripplerFill="#c5ced7" style="-fx-background-color: #5d5d5d;" text=" ">
          <graphic>
-            <FontAwesomeIcon iconName="SEARCH" size="1.5em" styleClass="glyph-style" text="" />
-         </graphic>
-      </JFXButton>
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="SEARCH" size="1.7em" />
+         </graphic></JFXButton>
       <JFXListView layoutX="32.0" layoutY="91.0" prefHeight="331.0" prefWidth="268.0" />
       <JFXListView layoutX="403.0" layoutY="91.0" prefHeight="331.0" prefWidth="268.0" />
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="256.0" layoutY="431.0" prefHeight="32.0" prefWidth="0.0" ripplerFill="#82a1bf" styleClass="cursor-hand" text=" ">
+      <JFXButton contentDisplay="CENTER" layoutX="255.0" layoutY="427.0" prefHeight="41.0" prefWidth="47.0" ripplerFill="#30cd22" style="-fx-background-color: #5d5d5d;" text=" ">
          <graphic>
-            <FontAwesomeIcon glyphStyle="-fx-fill:green" iconName="PLUS" size="3em" />
-         </graphic>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="403.0" layoutY="431.0" prefHeight="32.0" prefWidth="30.0" ripplerFill="#82a1bf" styleClass="cursor-hand" text=" ">
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="PLUS" size="1.8em" />
+         </graphic></JFXButton>
+      <JFXButton contentDisplay="CENTER" layoutX="403.0" layoutY="431.0" prefHeight="41.0" prefWidth="47.0" ripplerFill="#d73330" style="-fx-background-color: #5d5d5d;" text=" ">
          <graphic>
-            <FontAwesomeIcon glyphStyle="-fx-fill:red" iconName="CLOSE" size="3em" />
-         </graphic>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="323.0" layoutY="484.0" prefHeight="32.0" prefWidth="30.0" ripplerFill="#82a1bf" styleClass="cursor-hand" text=" ">
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="CLOSE" size="1.8em" />
+         </graphic></JFXButton>
+      <JFXButton contentDisplay="CENTER" layoutX="316.0" layoutY="487.0" prefHeight="74.0" prefWidth="86.0" ripplerFill="#137ada" style="-fx-background-color: #5d5d5d;" text=" ">
          <graphic>
-            <FontAwesomeIcon glyphStyle="-fx-fill:blue" iconName="CHECK_CIRCLE_ALT" size="5.5em" />
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="SAVE" size="4.7em" />
          </graphic></JFXButton>
    </children>
 </AnchorPane>
