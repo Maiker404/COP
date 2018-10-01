@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="960.0" stylesheets="@../../css/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.adm.CadastroProjetoController">
+   <children>
+      <Label layoutX="28.0" layoutY="6.0" style="-fx-text-fill: #353535;" text="Cadastro de projeto" textFill="WHITE" />
+      <JFXTextField labelFloat="true" layoutX="28.0" layoutY="49.0" prefHeight="25.0" prefWidth="408.0" promptText="Nome do projeto" />
+      <JFXTextField labelFloat="true" layoutX="238.0" layoutY="98.0" prefHeight="25.0" prefWidth="198.0" promptText="Data de entrega" />
+      <JFXTextArea labelFloat="true" layoutX="28.0" layoutY="150.0" prefHeight="165.0" prefWidth="408.0" promptText="Descrição" />
+      <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="185.0" layoutY="432.0" prefHeight="78.0" prefWidth="118.0" style="-fx-background-color: #5d5d5d;" text="Limpar" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="TRASH" size="4em" />
+         </graphic></JFXButton>
+      <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="28.0" layoutY="415.0" prefHeight="95.0" prefWidth="144.0" style="-fx-background-color: #5d5d5d;" text="Salvar" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="FILE" size="4em" />
+         </graphic></JFXButton>
+      <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="318.0" layoutY="432.0" prefHeight="78.0" prefWidth="118.0" style="-fx-background-color: #5d5d5d;" text="Equipe" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="USERS" size="3.6em" />
+         </graphic></JFXButton>
+      <Label layoutX="499.0" layoutY="6.0" style="-fx-text-fill: #353535;" text="Equipe" textFill="WHITE" />
+      <JFXListView layoutX="499.0" layoutY="34.0" prefHeight="212.0" prefWidth="433.0" />
+      <Label layoutX="499.0" layoutY="275.0" style="-fx-text-fill: #353535;" text="Gerenciador" textFill="WHITE" />
+      <JFXListView layoutX="499.0" layoutY="304.0" prefHeight="206.0" prefWidth="433.0" />
+      <JFXTextField editable="false" labelFloat="true" layoutX="28.0" layoutY="98.0" prefHeight="25.0" prefWidth="198.0" promptText="Data de Inicio" />
+   </children>
+</AnchorPane>

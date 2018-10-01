@@ -27,48 +27,66 @@ public class Usuario {
     @Column
     private String datanasc;
     @Column
-    private String end;
-    
-    
-    public String getPermisao() {
-        return permisao;
-    }
-    public void setPermisao(String permisao) {
-        this.permisao = permisao;
-    }
+    private String rua;
+    @Column
+    private String bairro;
+    @Column
+    private String cep;
+    @Column
+    private String numero;
+
     public Integer getId() {
         return id;
     }
+
     public void setId(Integer id) {
         this.id = id;
     }
+
     public String getSenha() {
         return senha;
     }
+
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
     public String getUser() {
         return user;
     }
+
     public void setUser(String user) {
         this.user = user;
     }
+
+    public String getPermisao() {
+        return permisao;
+    }
+
+    public void setPermisao(String permisao) {
+        this.permisao = permisao;
+    }
+
     public String getNome() {
         return nome;
     }
-    public String getSobrenome() {
-        return sobrenome;
-    }
-    public String getFuncao() {
-        return funcao;
-    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
+
+    public String getFuncao() {
+        return funcao;
+    }
+
     public void setFuncao(String funcao) {
         this.funcao = funcao;
     }
@@ -89,11 +107,35 @@ public class Usuario {
         this.datanasc = datanasc;
     }
 
-    public String getEnd() {
-        return end;
+    public String getRua() {
+        return rua;
     }
 
-    public void setEnd(String end) {
-        this.end = end;
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 }

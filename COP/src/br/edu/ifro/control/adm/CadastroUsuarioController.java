@@ -2,6 +2,7 @@ package br.edu.ifro.control.adm;
 
 import br.edu.ifro.model.Usuario;
 import br.edu.ifro.utils.Gerador;
+import br.edu.ifro.utils.PersistenceProperties;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
@@ -43,13 +44,17 @@ public class CadastroUsuarioController implements Initializable {
     @FXML
     private JFXTextField txtFuncao;
     @FXML
-    private JFXListView<?> listView;
-    @FXML
-    private JFXTextField txtEnd;
-    @FXML
     private JFXTextField txtCpf;
     @FXML
     private JFXTextField txtDataNasc;
+    @FXML
+    private JFXTextField txtBairro;
+    @FXML
+    private JFXTextField txtCep;
+    @FXML
+    private JFXTextField txtRua;
+    @FXML
+    private JFXTextField txtNumero;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -63,26 +68,29 @@ public class CadastroUsuarioController implements Initializable {
 
     @FXML
     private void cadastro(ActionEvent event) throws IOException {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("gop");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("cop",new PersistenceProperties().get());
         EntityManager em = emf.createEntityManager();
         Usuario u = new Usuario();
         u.setUser(txtUser.getText());
         u.setCpf(txtCpf.getText());
-        u.setEnd(txtEnd.getText());
         u.setDatanasc(txtDataNasc.getText());
         u.setSenha(txtPass.getText());
         u.setPermisao(cbxPerm.getSelectionModel().getSelectedItem().toString());
         u.setNome(txtNome.getText());
         u.setSobrenome(txtSobrenome.getText());
         u.setFuncao(txtFuncao.getText());
+        u.setRua(txtRua.getText());
+        u.setBairro(txtBairro.getText());
+        u.setCep(txtCep.getText());
+        u.setNumero(txtNumero.getText());
         em.getTransaction().begin();
         JFXDialogLayout content = new JFXDialogLayout();
         Label body=new Label();
         try {
             em.persist(u);
             body.setText("Cadastro realizado!");
-            body.setStyle("-fx-text-color:#000;");
-            content.setStyle("-fx-background-color: green;");
+            body.setStyle("-fx-text-color:grenn;");
+            content.setStyle("-fx-background-color: #353535;");
             content.setBody(body);
         } catch (Exception ex) {
             Pane p=new Gerador().headPane("ERRO","/br/edu/ifro/image/alerta.png","-fx-text-color:black;", "-fx-background-color:white;");

@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 public class MasterAdmController implements Initializable {
     private AnchorPane dash,project,user;
 
@@ -35,27 +36,31 @@ public class MasterAdmController implements Initializable {
     private void loadPane(int s){
     
     }
-    @FXML
     private void loadDash(MouseEvent event) {
         this.loadPane(1);
     }
 
     @FXML
-    private void loadProject(MouseEvent event) {
-    }
-
-    @FXML
-    private void loadUser(MouseEvent event) {
-    }
-    @FXML
     private void minimizeWindow(ActionEvent event) {
+        Stage stage = (Stage) stackPane.getScene().getWindow();
+        stage.setIconified(true);
     }
 
     @FXML
     private void closeWindow(ActionEvent event) {
+        Stage stage = (Stage) stackPane.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
-    private void CloseWindow(MouseEvent event) {
+    private void openDash(ActionEvent event) {
+    }
+
+    @FXML
+    private void openPro(ActionEvent event) {
+    }
+
+    @FXML
+    private void openUser(ActionEvent event) {
     }
 }

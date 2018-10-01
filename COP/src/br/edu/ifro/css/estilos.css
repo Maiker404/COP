@@ -16,10 +16,16 @@ JFXTextField,JFXPasswordField,JFXTextArea,JFXComboBox{
     -fx-text-fill: #212121;
 }
 .hoverBtnMenu{
-    -fx-text-fill: white;
+    -fx-background-color:none;
+    -fx-text-fill: #353535;
 }
 .hoverBtnMenu:hover{
-    -fx-border-radius: 5px;
-    -fx-border-color: #353535;
-    -fx-text-fill: #353535;
+    -fx-background-color:#353535;
+    -fx-text-fill: white;
+}
+.windowsBtn{
+    -fx-background-color:transparent;
+}
+.windowsBtn:hover{
+    -fx-background-color:#353535;
 }
