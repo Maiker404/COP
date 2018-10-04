@@ -23,3 +23,9 @@ JFXTextField,JFXPasswordField,JFXTextArea,JFXComboBox{
     -fx-background-color:#353535;
     -fx-text-fill: white;
 }
+.windowsBtn{
+    -fx-background-color:transparent;
+}
+.windowsBtn:hover{
+    -fx-background-color:#353535;
+}

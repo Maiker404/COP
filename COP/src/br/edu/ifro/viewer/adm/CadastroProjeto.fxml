@@ -12,25 +12,54 @@
 <AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="960.0" stylesheets="@../../css/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.adm.CadastroProjetoController">
    <children>
       <Label layoutX="28.0" layoutY="6.0" style="-fx-text-fill: #353535;" text="Cadastro de projeto" textFill="WHITE" />
-      <JFXTextField labelFloat="true" layoutX="28.0" layoutY="49.0" prefHeight="25.0" prefWidth="408.0" promptText="Nome do projeto" />
-      <JFXTextField labelFloat="true" layoutX="238.0" layoutY="98.0" prefHeight="25.0" prefWidth="198.0" promptText="Data de entrega" />
-      <JFXTextArea labelFloat="true" layoutX="28.0" layoutY="150.0" prefHeight="165.0" prefWidth="408.0" promptText="Descrição" />
-      <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="185.0" layoutY="432.0" prefHeight="78.0" prefWidth="118.0" style="-fx-background-color: #5d5d5d;" text="Limpar" textFill="WHITE">
-         <graphic>
-            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="TRASH" size="4em" />
-         </graphic></JFXButton>
-      <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="28.0" layoutY="415.0" prefHeight="95.0" prefWidth="144.0" style="-fx-background-color: #5d5d5d;" text="Salvar" textFill="WHITE">
-         <graphic>
-            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="FILE" size="4em" />
-         </graphic></JFXButton>
-      <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="318.0" layoutY="432.0" prefHeight="78.0" prefWidth="118.0" style="-fx-background-color: #5d5d5d;" text="Equipe" textFill="WHITE">
-         <graphic>
-            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="USERS" size="3.6em" />
-         </graphic></JFXButton>
-      <Label layoutX="499.0" layoutY="6.0" style="-fx-text-fill: #353535;" text="Equipe" textFill="WHITE" />
-      <JFXListView layoutX="499.0" layoutY="34.0" prefHeight="212.0" prefWidth="433.0" />
-      <Label layoutX="499.0" layoutY="275.0" style="-fx-text-fill: #353535;" text="Gerenciador" textFill="WHITE" />
-      <JFXListView layoutX="499.0" layoutY="304.0" prefHeight="206.0" prefWidth="433.0" />
-      <JFXTextField editable="false" labelFloat="true" layoutX="28.0" layoutY="98.0" prefHeight="25.0" prefWidth="198.0" promptText="Data de Inicio" />
+      <ScrollPane focusTraversable="false" layoutY="28.0" prefHeight="522.0" prefWidth="960.0">
+        <content>
+          <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="672.0" prefWidth="945.0" style="-fx-border-width: 0px;">
+               <children>
+                  <JFXTextField labelFloat="true" layoutX="19.0" layoutY="14.0" prefHeight="25.0" prefWidth="408.0" promptText="Nome do projeto" />
+                  <JFXTextField labelFloat="true" layoutX="223.0" layoutY="58.0" prefHeight="25.0" prefWidth="205.0" promptText="Data de entrega" />
+                  <JFXTextArea labelFloat="true" layoutX="19.0" layoutY="102.0" prefHeight="123.0" prefWidth="408.0" promptText="Descrição" />
+                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="659.0" layoutY="17.0" prefHeight="78.0" prefWidth="118.0" style="-fx-background-color: #5d5d5d;" text="Limpar" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="TRASH" size="4em" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="788.0" layoutY="14.0" prefHeight="95.0" prefWidth="144.0" style="-fx-background-color: #5d5d5d;" text="Salvar" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="FILE" size="4em" />
+                     </graphic>
+                  </JFXButton>
+                  <Label layoutX="475.0" layoutY="336.0" style="-fx-text-fill: #353535;" text="Equipe" textFill="WHITE" />
+                  <JFXListView layoutX="475.0" layoutY="363.0" prefHeight="285.0" prefWidth="435.0" />
+                  <JFXListView layoutX="19.0" layoutY="363.0" prefHeight="285.0" prefWidth="435.0" />
+                  <JFXTextField editable="false" labelFloat="true" layoutX="19.0" layoutY="58.0" prefHeight="25.0" prefWidth="198.0" promptText="Data de Inicio" />
+                  <Label layoutX="19.0" layoutY="336.0" style="-fx-text-fill: #353535;" text="Usuario" textFill="WHITE" />
+                  <JFXTextField focusColor="WHITE" layoutX="520.0" layoutY="324.0" prefHeight="25.0" prefWidth="250.0" styleClass="jtextfield" unFocusColor="WHITE" />
+                  <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="SEARCH" layoutX="444.0" layoutY="-8.0" size="1.7em" />
+                  <JFXTextField focusColor="WHITE" layoutX="69.0" layoutY="325.0" prefHeight="25.0" prefWidth="250.0" styleClass="jtextfield" unFocusColor="WHITE" />
+                  <JFXButton contentDisplay="CENTER" layoutX="327.0" layoutY="318.0" prefHeight="40.0" prefWidth="64.0" ripplerFill="#c1c9d0" style="-fx-background-color: #5d5d5d;" text=" ">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="SEARCH" size="1.7em" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="CENTER" layoutX="853.0" layoutY="317.0" prefHeight="41.0" prefWidth="54.0" ripplerFill="#d73330" style="-fx-background-color: #5d5d5d;" text=" ">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="CLOSE" size="1.8em" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="CENTER" layoutX="400.0" layoutY="316.0" prefHeight="41.0" prefWidth="54.0" ripplerFill="#30cd22" style="-fx-background-color: #5d5d5d;" text=" ">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="PLUS" size="1.8em" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="CENTER" layoutX="777.0" layoutY="318.0" prefHeight="40.0" prefWidth="64.0" ripplerFill="#c1c9d0" style="-fx-background-color: #5d5d5d;" text=" ">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="SEARCH" size="1.7em" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
    </children>
 </AnchorPane>
