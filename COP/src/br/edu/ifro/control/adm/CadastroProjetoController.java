@@ -1,27 +1,102 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.ifro.control.adm;
-
+import br.edu.ifro.model.Projeto;
+import br.edu.ifro.model.Usuario;
+import br.edu.ifro.utils.Gerador;
+import br.edu.ifro.utils.PersistenceProperties;
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXListView;
+import com.jfoenix.controls.JFXTextArea;
+import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-
-/**
- * FXML Controller class
- *
- * @author Maiker
- */
+import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 public class CadastroProjetoController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private StackPane stackP;
+    @FXML
+    private JFXTextField nome;
+    @FXML
+    private JFXTextField dataFinal;
+    @FXML
+    private JFXTextArea desc;
+    @FXML
+    private JFXListView<?> viewTime;
+    @FXML
+    private JFXListView<?> viewUsers;
+    @FXML
+    private JFXTextField dataIncial;
+    @FXML
+    private JFXTextField textTime;
+    @FXML
+    private JFXTextField txtUser;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }    
-    
+    @FXML
+    private void onLimpar(ActionEvent event) {
+        this.dataFinal.setText("");
+        this.dataIncial.setText("");
+        this.desc.setText("");
+        this.nome.setText("");
+        this.viewTime.setItems(null);
+    }
+    @FXML
+    private void onSalvar(ActionEvent event) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("cop",new PersistenceProperties().get());
+        EntityManager em = emf.createEntityManager();
+        Projeto pro = new Projeto();
+        pro.setDataFinal(dataFinal.getText());
+        pro.setDataInicial(dataIncial.getText());
+        pro.setDescricao(desc.getText());
+        pro.setNome(nome.getText());
+        pro.setEquipe((ObservableList<Usuario>) viewTime.getSelectionModel().getSelectedItems());
+        em.getTransaction().begin();
+        JFXDialogLayout content = new JFXDialogLayout();
+        Label body=new Label();
+        try {
+            em.persist(pro);
+            body.setText("Cadastro realizado!");
+            body.setStyle("-fx-text-color:grenn;");
+            content.setStyle("-fx-background-color: #353535;");
+            content.setBody(body);
+        } catch (Exception ex) {
+            Pane p=new Gerador().headPane("ERRO","/br/edu/ifro/image/alerta.png","-fx-text-color:black;", "-fx-background-color:white;");
+            content.setHeading(p);
+            body.setStyle("-fx-text-color:red;");
+            body.setText("Usuario já existe no sistema!");
+            content.setBody(body);
+        }
+        try {em.getTransaction().commit();} catch (Exception ex) {}
+        JFXDialog diag = new JFXDialog(this.stackP, content, JFXDialog.DialogTransition.TOP);
+        diag.show();
+    }
+
+    @FXML
+    private void searchTime(ActionEvent event) {
+    }
+
+    @FXML
+    private void deleteUser(ActionEvent event) {
+    }
+
+    @FXML
+    private void addUser(ActionEvent event) {
+    }
+
+    @FXML
+    private void Searchuser(ActionEvent event) {
+    }
 }
