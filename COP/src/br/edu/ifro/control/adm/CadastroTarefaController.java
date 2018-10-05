@@ -5,8 +5,11 @@
  */
 package br.edu.ifro.control.adm;
 
+import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
@@ -16,6 +19,13 @@ import javafx.fxml.Initializable;
  */
 public class CadastroTarefaController implements Initializable {
 
+    @FXML
+    private JFXButton btnSalvaTarefa;
+    @FXML
+    private JFXButton btnNovoTarefa;
+    @FXML
+    private JFXButton btnCancelaTarefa;
+
     /**
      * Initializes the controller class.
      */
@@ -23,5 +33,17 @@ public class CadastroTarefaController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void salvarTarefa(ActionEvent event) {
+    }
+
+    @FXML
+    private void novoTarefa(ActionEvent event) {
+    }
+
+    @FXML
+    private void cancelaTarefa(ActionEvent event) {
+    }
     
 }
