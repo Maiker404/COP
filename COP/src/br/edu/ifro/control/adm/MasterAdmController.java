@@ -71,4 +71,8 @@ public class MasterAdmController implements Initializable {
     @FXML
     private void logoff(ActionEvent event) {
     }
+
+    @FXML
+    private void openTarefas(ActionEvent event) {
+    }
 }
