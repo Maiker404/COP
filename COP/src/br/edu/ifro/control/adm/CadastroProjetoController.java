@@ -9,8 +9,9 @@ import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
-import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,9 +19,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import static javax.management.Query.value;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 public class CadastroProjetoController implements Initializable {
 
     @FXML
@@ -32,9 +35,9 @@ public class CadastroProjetoController implements Initializable {
     @FXML
     private JFXTextArea desc;
     @FXML
-    private JFXListView<?> viewTime;
+    private JFXListView<Usuario> viewTime;
     @FXML
-    private JFXListView<?> viewUsers;
+    private JFXListView<Usuario> viewUsers;
     @FXML
     private JFXTextField dataIncial;
     @FXML
@@ -44,6 +47,13 @@ public class CadastroProjetoController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("COP",new PersistenceProperties().get());
+        EntityManager em = emf.createEntityManager();
+        Query query = em.createQuery("SELECT u FROM Usuario as u");
+        query.setParameter("name", this.txtUser.getText());
+        List<Usuario> user = query.getResultList();
+        ObservableList users = FXCollections.observableArrayList(user);
+        this.viewUsers.setItems(users);
     }    
     @FXML
     private void onLimpar(ActionEvent event) {
@@ -55,7 +65,7 @@ public class CadastroProjetoController implements Initializable {
     }
     @FXML
     private void onSalvar(ActionEvent event) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("cop",new PersistenceProperties().get());
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("COP",new PersistenceProperties().get());
         EntityManager em = emf.createEntityManager();
         Projeto pro = new Projeto();
         pro.setDataFinal(dataFinal.getText());

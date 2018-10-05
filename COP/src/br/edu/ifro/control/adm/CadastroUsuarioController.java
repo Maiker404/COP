@@ -68,7 +68,7 @@ public class CadastroUsuarioController implements Initializable {
 
     @FXML
     private void cadastro(ActionEvent event) throws IOException {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("cop",new PersistenceProperties().get());
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("COP",new PersistenceProperties().get());
         EntityManager em = emf.createEntityManager();
         Usuario u = new Usuario();
         u.setUser(txtUser.getText());

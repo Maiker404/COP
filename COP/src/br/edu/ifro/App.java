@@ -11,8 +11,9 @@ public class App extends Application {
     private double x,y;
     @Override
     public void start(final Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("viewer/Login.fxml"));
-//        Parent root = FXMLLoader.load(getClass().getResource("viewer/adm/CadastroUsuario.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("viewer/Login.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("viewer/adm/CadastroProjeto.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("viewer/adm/CadastroUsuario.fxml"));
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         root.setOnMousePressed((MouseEvent event) -> {
