@@ -63,4 +63,12 @@ public class MasterAdmController implements Initializable {
     @FXML
     private void openUser(ActionEvent event) {
     }
+
+    @FXML
+    private void openConfig(ActionEvent event) {
+    }
+
+    @FXML
+    private void logoff(ActionEvent event) {
+    }
 }
