@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /GOP/nbproject/private/
 /GOP/build/
 /GOP/dist/
@@ -10,3 +11,11 @@ COP/nbproject/jfx-impl\.xml
 
 COP/nbproject/UPDATED\.TXT
 /COP/build/
+=======
+/GOP/nbproject/private/
+/GOP/build/
+/GOP/dist/
+/build/
+/COP/nbproject/private/
+/COP/dist/
+>>>>>>> Stashed changes
