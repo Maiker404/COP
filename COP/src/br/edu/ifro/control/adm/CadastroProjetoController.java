@@ -47,49 +47,65 @@ public class CadastroProjetoController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        this.loadUsers();
+    }
+    private void loadUsers(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("COP",new PersistenceProperties().get());
         EntityManager em = emf.createEntityManager();
         Query query = em.createQuery("SELECT u FROM Usuario as u");
-        query.setParameter("name", this.txtUser.getText());
         List<Usuario> user = query.getResultList();
         ObservableList users = FXCollections.observableArrayList(user);
         this.viewUsers.setItems(users);
-    }    
+    }
     @FXML
     private void onLimpar(ActionEvent event) {
         this.dataFinal.setText("");
         this.dataIncial.setText("");
         this.desc.setText("");
         this.nome.setText("");
-        this.viewTime.setItems(null);
+        for(int i=0;i<this.viewTime.getItems().size();i++){
+            this.viewUsers.getItems().add(this.viewTime.getItems().get(i));
+        }
+        this.viewTime.getItems().removeAll(this.viewTime.getItems());
     }
     @FXML
     private void onSalvar(ActionEvent event) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("COP",new PersistenceProperties().get());
-        EntityManager em = emf.createEntityManager();
-        Projeto pro = new Projeto();
-        pro.setDataFinal(dataFinal.getText());
-        pro.setDataInicial(dataIncial.getText());
-        pro.setDescricao(desc.getText());
-        pro.setNome(nome.getText());
-        pro.setEquipe((ObservableList<Usuario>) viewTime.getSelectionModel().getSelectedItems());
-        em.getTransaction().begin();
         JFXDialogLayout content = new JFXDialogLayout();
         Label body=new Label();
-        try {
-            em.persist(pro);
-            body.setText("Cadastro realizado!");
-            body.setStyle("-fx-text-color:grenn;");
-            content.setStyle("-fx-background-color: #353535;");
-            content.setBody(body);
-        } catch (Exception ex) {
+        if(this.viewTime.getItems().isEmpty()){ 
             Pane p=new Gerador().headPane("ERRO","/br/edu/ifro/image/alerta.png","-fx-text-color:black;", "-fx-background-color:white;");
             content.setHeading(p);
-            body.setStyle("-fx-text-color:red;");
-            body.setText("Usuario já existe no sistema!");
+            body.setStyle("-fx-text-fill:#ff1a1a");
+            body.setText("Coloque um usuario pelo menos no projeto!");
+            content.setStyle("-fx-background-color: #353535;");
             content.setBody(body);
+        }else{
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("COP",new PersistenceProperties().get());
+            EntityManager em = emf.createEntityManager();
+            Projeto pro = new Projeto();
+            pro.setDataFinal(dataFinal.getText());
+            pro.setDataInicial(dataIncial.getText());
+            pro.setDescricao(desc.getText());
+            pro.setNome(nome.getText());
+            List<Usuario> eq= this.viewTime.getItems().subList(0, this.viewTime.getItems().size());
+            pro.setEquipe(eq);
+            em.getTransaction().begin();
+            try {
+                em.persist(pro);
+                body.setText("Cadastro realizado!");
+                body.setStyle("-fx-text-fill:#00b300");
+                content.setStyle("-fx-background-color: #353535;");
+                content.setBody(body);
+            } catch (Exception ex) {
+                Pane p=new Gerador().headPane("ERRO","/br/edu/ifro/image/alerta.png","-fx-text-color:black;", "-fx-background-color:white;");
+                content.setHeading(p);
+                body.setStyle("-fx-text-fill:#ff1a1a");
+                body.setText("Usuario já existe no sistema!");
+                content.setStyle("-fx-background-color: #353535;");
+                content.setBody(body);
+            }
+            try {em.getTransaction().commit();} catch (Exception ex) {} 
         }
-        try {em.getTransaction().commit();} catch (Exception ex) {}
         JFXDialog diag = new JFXDialog(this.stackP, content, JFXDialog.DialogTransition.TOP);
         diag.show();
     }
@@ -100,10 +116,36 @@ public class CadastroProjetoController implements Initializable {
 
     @FXML
     private void deleteUser(ActionEvent event) {
+        if(!this.viewTime.getSelectionModel().isEmpty()){   
+            this.viewUsers.getItems().add(this.viewTime.getSelectionModel().getSelectedItem());
+            this.viewTime.getItems().remove(this.viewTime.getSelectionModel().getSelectedIndex());
+        }else{
+            JFXDialogLayout content = new JFXDialogLayout();
+            Label body=new Label();
+                body.setText("Nenhum usuario selecionado!");
+                body.setStyle("-fx-text-fill:#ff1a1a");
+                content.setStyle("-fx-background-color: #353535;");
+                content.setBody(body);
+            JFXDialog diag = new JFXDialog(this.stackP, content, JFXDialog.DialogTransition.TOP);
+            diag.show();
+        }
     }
 
     @FXML
     private void addUser(ActionEvent event) {
+        if(!this.viewUsers.getSelectionModel().isEmpty()){   
+            this.viewTime.getItems().add(this.viewUsers.getSelectionModel().getSelectedItem());
+            this.viewUsers.getItems().remove(this.viewUsers.getSelectionModel().getSelectedIndex());
+        }else{
+            JFXDialogLayout content = new JFXDialogLayout();
+            Label body=new Label();
+                body.setText("Nenhum usuario selecionado!");
+                body.setStyle("-fx-text-fill:#ff1a1a");
+                content.setStyle("-fx-background-color: #353535;");
+                content.setBody(body);
+            JFXDialog diag = new JFXDialog(this.stackP, content, JFXDialog.DialogTransition.TOP);
+            diag.show();
+        }
     }
 
     @FXML

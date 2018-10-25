@@ -45,6 +45,15 @@
                   </HBox>
                   <HBox alignment="TOP_CENTER" fillHeight="false" layoutX="10.0" layoutY="160.0" prefHeight="0.0" prefWidth="120.0">
                      <children>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openTarefas" prefHeight="50.0" prefWidth="135.0" style="-fx-cursor: hand;" styleClass="hoverBtnMenu" text="Tarefas" textFill="#b5b5b5" HBox.hgrow="NEVER">
+                           <font>
+                              <Font name="Calibri Bold" size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" fillHeight="false" layoutX="10.0" layoutY="160.0" prefHeight="0.0" prefWidth="120.0">
+                     <children>
                         <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openUser" prefHeight="50.0" prefWidth="135.0" style="-fx-cursor: hand;" styleClass="hoverBtnMenu" text="Usuarios" textFill="#b5b5b5" HBox.hgrow="NEVER">
                            <font>
                               <Font name="Calibri Bold" size="17.0" />
