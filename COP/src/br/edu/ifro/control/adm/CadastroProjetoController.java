@@ -46,7 +46,10 @@ public class CadastroProjetoController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        this.loadUsers();
+        Thread thread = new Thread(() -> {
+            this.loadUsers();
+        });
+        thread.start();
     }
     private void loadUsers(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("COP",new PersistenceProperties().get());
@@ -95,11 +98,12 @@ public class CadastroProjetoController implements Initializable {
                 body.setStyle("-fx-text-fill:#00b300");
                 content.setStyle("-fx-background-color: #353535;");
                 content.setBody(body);
+                this.onLimpar(event);
             } catch (Exception ex) {
                 Pane p=new Gerador().headPane("ERRO","/br/edu/ifro/image/alerta.png","-fx-text-color:black;", "-fx-background-color:white;");
                 content.setHeading(p);
                 body.setStyle("-fx-text-fill:#ff1a1a");
-                body.setText("Usuario já existe no sistema!");
+                body.setText("Projeto já existe no sistema!");
                 content.setStyle("-fx-background-color: #353535;");
                 content.setBody(body);
             }

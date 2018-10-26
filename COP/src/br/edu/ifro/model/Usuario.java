@@ -1,4 +1,5 @@
 package br.edu.ifro.model;
+import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 @Entity
 //@Transient
-public class Usuario {
+public class Usuario implements Serializable {
 
     @ManyToMany(mappedBy = "equipe")
     private List<Projeto> projetos;
@@ -39,6 +40,10 @@ public class Usuario {
     private String cep;
     @Column
     private String numero;
+    @Override
+    public String toString(){
+        return this.id+" - "+this.user;
+    }
 
     public Integer getId() {
         return id;

@@ -13,13 +13,8 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 public class MasterAdmController implements Initializable {
     private AnchorPane dash,project,user;
-    private Usuario usuario;
     @FXML
     private StackPane stackPane;
-    @FXML
-    public void setUser(Usuario u){
-        this.usuario=u;
-    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 //        try {
@@ -33,7 +28,6 @@ public class MasterAdmController implements Initializable {
 //        try {
 //            this.user=FXMLLoader.load(getClass().getResource("CadastroUsuario.fxml"));
 //        } catch (IOException ex) {}
-        System.out.println(usuario.getNome());
     }
     /*Metodo para carregar as telas visiveis*/
     private void loadPane(int s){
