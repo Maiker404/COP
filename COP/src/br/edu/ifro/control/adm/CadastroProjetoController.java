@@ -9,9 +9,8 @@ import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
-import java.util.List;
+import java.util.Date;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,11 +18,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
-import static javax.management.Query.value;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
 public class CadastroProjetoController implements Initializable {
 
     @FXML
@@ -35,9 +32,9 @@ public class CadastroProjetoController implements Initializable {
     @FXML
     private JFXTextArea desc;
     @FXML
-    private JFXListView<Usuario> viewTime;
+    private JFXListView<?> viewTime;
     @FXML
-    private JFXListView<Usuario> viewUsers;
+    private JFXListView<?> viewUsers;
     @FXML
     private JFXTextField dataIncial;
     @FXML
@@ -47,6 +44,7 @@ public class CadastroProjetoController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+<<<<<<< HEAD
         this.loadUsers();
     }
     private void loadUsers(){
@@ -57,6 +55,9 @@ public class CadastroProjetoController implements Initializable {
         ObservableList users = FXCollections.observableArrayList(user);
         this.viewUsers.setItems(users);
     }
+=======
+    }    
+>>>>>>> parent of 748f163... Testando cadastro projeto
     @FXML
     private void onLimpar(ActionEvent event) {
         this.dataFinal.setText("");
@@ -70,6 +71,18 @@ public class CadastroProjetoController implements Initializable {
     }
     @FXML
     private void onSalvar(ActionEvent event) {
+<<<<<<< HEAD
+=======
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("cop",new PersistenceProperties().get());
+        EntityManager em = emf.createEntityManager();
+        Projeto pro = new Projeto();
+        pro.setDataFinal(dataFinal.getText());
+        pro.setDataInicial(dataIncial.getText());
+        pro.setDescricao(desc.getText());
+        pro.setNome(nome.getText());
+        pro.setEquipe((ObservableList<Usuario>) viewTime.getSelectionModel().getSelectedItems());
+        em.getTransaction().begin();
+>>>>>>> parent of 748f163... Testando cadastro projeto
         JFXDialogLayout content = new JFXDialogLayout();
         Label body=new Label();
         if(this.viewTime.getItems().isEmpty()){ 

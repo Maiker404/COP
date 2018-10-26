@@ -1,22 +1,19 @@
 package br.edu.ifro.model;
 
-import java.io.Serializable;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Tarefa implements Serializable {
+public class Tarefa {
 
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idTarefa;
-    @Column  
     private Integer idUsuario;
-    @Column  
     private String Descri,dataLanc,dataExp;
+  
     public Integer getIdTarefa() {
         return idTarefa;
     }

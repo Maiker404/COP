@@ -1,7 +1,7 @@
 package br.edu.ifro.model;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Date;
 import javafx.collections.ObservableList;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,10 +25,10 @@ public class Projeto implements Serializable {
     private String descricao;
     @Column    
     @ManyToMany
-    private List<Usuario> equipe;
+    private ObservableList<Usuario> equipe;
     @Column    
     @OneToMany
-    private List<Tarefa> tarefas;
+    private ArrayList<Tarefa> tarefas;
 
     public Integer getIdProjeto() {
         return idProjeto;
@@ -54,19 +54,19 @@ public class Projeto implements Serializable {
         this.descricao = descricao;
     }
 
-    public List<Usuario> getEquipe() {
+    public ObservableList<Usuario> getEquipe() {
         return equipe;
     }
 
-    public void setEquipe(List<Usuario> equipe) {
+    public void setEquipe(ObservableList<Usuario> equipe) {
         this.equipe = equipe;
     }
 
-    public List<Tarefa> getTarefas() {
+    public ArrayList<Tarefa> getTarefas() {
         return tarefas;
     }
 
-    public void setTarefas(List<Tarefa> tarefas) {
+    public void setTarefas(ArrayList<Tarefa> tarefas) {
         this.tarefas = tarefas;
     }
 

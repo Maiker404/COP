@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="213.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+         <image>
+            <Image url="@../../image/Logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnInicio" buttonType="RAISED" prefHeight="90.0" prefWidth="300.0" ripplerFill="#6b6868" text="Inicio" textAlignment="CENTER" />
+      <JFXButton fx:id="btnProjetos" buttonType="RAISED" prefHeight="90.0" prefWidth="300.0" ripplerFill="#7c7474" text="Projetos" />
+      <JFXButton fx:id="btnTarefas" buttonType="RAISED" prefHeight="90.0" prefWidth="300.0" ripplerFill="#7c7474" text="Tarefas" />
+      <JFXButton fx:id="btnPerfil" buttonType="RAISED" prefHeight="90.0" prefWidth="300.0" ripplerFill="#7c7474" text="Perfil" />
+      <JFXButton fx:id="btnExit" buttonType="RAISED" prefHeight="90.0" prefWidth="250.0" ripplerFill="#7c7474" text="Sair" />
+   </children>
+</VBox>
