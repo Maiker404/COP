@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="1080.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.adm.CadastroTarefaController">
+   <children>
+      <Label layoutX="226.0" layoutY="24.0" prefHeight="45.0" prefWidth="641.0" text="Cadastro de tarefas">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <JFXTextField layoutX="84.0" layoutY="104.0" prefHeight="25.0" prefWidth="899.0" promptText="Nome" />
+      <JFXComboBox layoutX="83.0" layoutY="165.0" prefHeight="25.0" prefWidth="428.0" promptText="Projeto" />
+      <JFXTextArea layoutX="83.0" layoutY="222.0" prefHeight="162.0" prefWidth="899.0" promptText="Descrição" />
+      <JFXButton fx:id="btnSalvaTarefa" layoutX="65.0" layoutY="433.0" onAction="#salvarTarefa" prefHeight="123.0" prefWidth="173.0" style="-fx-background-color: pink;" text="Salvar" />
+      <JFXButton fx:id="btnNovoTarefa" layoutX="264.0" layoutY="475.0" onAction="#novoTarefa" prefHeight="78.0" prefWidth="136.0" style="-fx-background-color: pink;" text="Novo" />
+      <JFXButton fx:id="btnCancelaTarefa" layoutX="419.0" layoutY="475.0" onAction="#cancelaTarefa" prefHeight="78.0" prefWidth="136.0" style="-fx-background-color: pink;" text="Cancelar" />
+      <JFXComboBox layoutX="555.0" layoutY="165.0" prefHeight="25.0" prefWidth="428.0" promptText="Encarregado" />
+   </children>
+</AnchorPane>

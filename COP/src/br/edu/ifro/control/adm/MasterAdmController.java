@@ -1,8 +1,11 @@
 package br.edu.ifro.control.adm;
+import br.edu.ifro.model.Usuario;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -10,9 +13,13 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 public class MasterAdmController implements Initializable {
     private AnchorPane dash,project,user;
-
+    private Usuario usuario;
     @FXML
     private StackPane stackPane;
+    @FXML
+    public void setUser(Usuario u){
+        this.usuario=u;
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 //        try {
@@ -22,15 +29,11 @@ public class MasterAdmController implements Initializable {
 //        }
 //        try {
 //            this.project=FXMLLoader.load(getClass().getResource("CadastroProjeto.fxml"));
-//        } catch (IOException ex) {
-//            Logger.getLogger(MasterAdmController.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+//        } catch (IOException ex) {}
 //        try {
 //            this.user=FXMLLoader.load(getClass().getResource("CadastroUsuario.fxml"));
-//        } catch (IOException ex) {
-//            Logger.getLogger(MasterAdmController.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-
+//        } catch (IOException ex) {}
+        System.out.println(usuario.getNome());
     }
     /*Metodo para carregar as telas visiveis*/
     private void loadPane(int s){

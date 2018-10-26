@@ -61,13 +61,34 @@
                         </Button>
                      </children>
                   </HBox>
+                  <HBox alignment="TOP_CENTER" fillHeight="false" prefHeight="0.0" prefWidth="120.0">
+                     <children>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openConfig" prefHeight="50.0" prefWidth="135.0" style="-fx-cursor: hand;" styleClass="hoverBtnMenu" text="Configurações" textFill="#b5b5b5">
+                           <font>
+                              <Font name="Calibri Bold" size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="120.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#logoff" prefHeight="50.0" prefWidth="135.0" style="-fx-cursor: hand;" styleClass="hoverBtnMenu" text="Sair" textFill="#b5b5b5">
+                           <font>
+                              <Font name="Calibri Bold" size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="200.0" />
+                     </VBox.margin>
+                  </HBox>
                </children>
             </VBox>
          </left>
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <StackPane fx:id="stackPane" layoutX="7.0" layoutY="14.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="14.0" />
                </children>
             </AnchorPane>
          </center>

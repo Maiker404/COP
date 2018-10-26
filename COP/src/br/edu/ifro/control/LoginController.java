@@ -1,4 +1,5 @@
 package br.edu.ifro.control;
+import br.edu.ifro.control.adm.MasterAdmController;
 import br.edu.ifro.model.Usuario;
 import br.edu.ifro.utils.PersistenceProperties;
 import com.jfoenix.controls.JFXDialog;
@@ -37,6 +38,7 @@ public class LoginController implements Initializable {
     private Label infoUser;
     
     private boolean type;
+    private Usuario usuario;
     @FXML
     private StackPane stack;
     private double x,y;
@@ -52,6 +54,8 @@ public class LoginController implements Initializable {
                 estagio.close();
                 if(this.type==true){
                     reroot = FXMLLoader.load(getClass().getResource("/br/edu/ifro/viewer/adm/MasterAdm.fxml"));
+                    MasterAdmController cont=new MasterAdmController();
+                    cont.setUser(usuario);
                 }else{
                     reroot = FXMLLoader.load(getClass().getResource("/br/edu/ifro/viewer/communal/MasterCommunal.fxml"));
                 }
@@ -96,6 +100,7 @@ public class LoginController implements Initializable {
                 this.txtPass.setStyle("-fx-prompt-text-fill:green;-fx-text-fill:#353535;-jfx-focus-color:green;-jfx-unfocus-color:green;");
                 this.infoPass.setText("Sucess!");
                 this.infoPass.setStyle("-fx-text-fill:green;");
+                this.usuario=user.get(0);
                 log=true;
             }else{
                 this.txtPass.setStyle("-fx-prompt-text-fill:#353535;-fx-text-fill:#353535;-jfx-focus-color:red;-jfx-unfocus-color:red;");

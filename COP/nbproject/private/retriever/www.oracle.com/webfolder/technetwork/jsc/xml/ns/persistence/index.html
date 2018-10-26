@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang='en'>
+<head>
+<script>!function(e){function r(r){r&&r.data&&r.data.boomr_mq&&(e.BOOMR_mq=e.BOOMR_mq||[],e.BOOMR_mq.push(r.data.boomr_mq))}e.addEventListener&&e.addEventListener("message",r);var a=e.navigator;a&&"serviceWorker"in a&&a.serviceWorker.addEventListener&&a.serviceWorker.addEventListener("message",r)}(window);</script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Java Persistence API: XML Schemas</title>
+<style>
+    b {
+        color: #E40000;
+    }
+    
+    th {
+        background: #E40000;
+        color: white;
+    }
+    
+    table {
+        border-collapse: collapse;
+    }
+</style>
+
+<script>!function(){function o(n,i){if(n&&i)for(var r in i)i.hasOwnProperty(r)&&(void 0===n[r]?n[r]=i[r]:n[r].constructor===Object&&i[r].constructor===Object?o(n[r],i[r]):n[r]=i[r])}try{var n=decodeURIComponent("");if(n.length>0&&window.JSON&&"function"==typeof window.JSON.parse){var i=JSON.parse(n);void 0!==window.BOOMR_config?o(window.BOOMR_config,i):window.BOOMR_config=i}}catch(o){window.console&&"function"==typeof window.console.error&&console.error("mPulse: Could not parse configuration",o)}}();</script>
+<script>!function(e){var a="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,a="https://s2.go-mpulse.net/boomerang/";if(function(){function t(a){e.BOOMR_onload=a&&a.timeStamp||(new Date).getTime()}if(!e.BOOMR||!e.BOOMR.version&&!e.BOOMR.snippetExecuted){e.BOOMR=e.BOOMR||{},e.BOOMR.snippetExecuted=!0;var n,i,o,r=document.createElement("iframe");if(e.addEventListener)e.addEventListener("load",t,!1);else if(e.attachEvent)e.attachEvent("onload",t);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{i=r.contentWindow.document}catch(e){n=document.domain,r.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",i=r.contentWindow.document}i.open()._l=function(){var e=this.createElement("script");if(n)this.domain=n;e.id="boomr-if-as",e.src=a+"DXNLE-YBWWY-AR74T-WMD99-77VRA",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(e)},i.write("<bo"+'dy onload="document._l();">'),i.close()}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var a={i:!1,av:function(a){var t="http.initiator";if(a&&(!a[t]||"spa_hard"===a[t])){var n=""=="true"?1:0,i="",o=void 0!==e.aFeoApplied?1:0;if(BOOMR.addVar({"ak.v":14,"ak.cp":"82485","ak.ai":"165266","ak.ol":"0","ak.cr":70,"ak.ipv":4,"ak.proto":"","ak.rid":"b166eb","ak.r":27549,"ak.a2":n,"ak.m":"dscx","ak.n":"essl","ak.bpcip":"200.241.65.0","ak.cport":2649,"ak.gh":"189.53.111.86","ak.quicv":"","ak.tlsv":"UNKNOWN","ak.0rtt":"","ak.csrc":"-","ak.acc":"reno","ak.feo":o}),""!==i)BOOMR.addVar("ak.ruds",i)}},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={init:function(){if(!a.i){var e=BOOMR.subscribe;e("before_beacon",a.av,null,null),e("onbeacon",a.rv,null,null),a.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+    <div id="titleSource" style="background-">
+        <IMG SRC="http://www.oracle.com/us/016091_en.gif">
+    </div>
+<a name="top"></a>
+
+<!-- BEGIN PAGETITLE -->
+<div class="smallpagetitle"><h1>Java Persistence API: XML Schemas</h1></div>
+<!-- END PAGETITLE -->
+<!-- ============ -->
+<!-- MAIN CONTENT -->
+<!-- ============ -->
+<div class="contentdivider"><hr /> </div>
+<div><b>Contents</b></div>
+<ul>
+<li><a href="#0">Introduction</a></li>
+<li><a href="#1">Using Java Persistence Schemas</a></li>
+<li><a href="#2.2">Java Persistence 2.2 Schema Resources</a></li>
+<li><a href="#2.1">Java Persistence 2.1 Schema Resources</a></li>
+<li><a href="#2.0">Java Persistence 2.0 Schema Resources</a></li>
+<li><a href="#1.0">Java Persistence 1.0 Schema Resources</a></li>
+</ul>
+<a name="0"></a>
+<div><b>Introduction</b></div>
+<div class="contentdivider"><hr /> </div>
+<p>
+This document lists the document formats that will be used by the
+Java Persistence API XML descriptors.  The Java Persistence API
+requires that its XML descriptors be validated with respect to the XML
+Schema listed by this document.
+</p>
+<a name="1"></a>
+<div><b>Using Java Persistence Schemas</b></div>
+<div class="contentdivider"><hr /> </div>
+<p>
+Starting with the 2.1 version,
+the Java Persistence API Schemas share the namespace,
+<code>http://xmlns.jcp.org/xml/ns/persistence/</code>.
+Previous versions used the namespace
+<code>http://java.sun.com/xml/ns/persistence/</code>. Each schema
+document contains a version attribute that contains the version of the
+Java Persistence specification. This pertains to the specific version
+of the specification as well as the schema document itself.
+</p>
+<p>
+Each Java Persistence XML Schema document's file name contains the
+specific version of the Java Persistence specification to which it
+relates. This is introduced for convenience to locate specific versions
+of the schema documents. However, XML descriptor instances are not
+required to refer to a specific file. Instead, an instance must specify
+the version of the specification by using the version attribute.  This
+allows XML descriptor processors to use the version information to
+choose the appropriate version of the schema document(s) to process XML
+descriptor instances.
+</p>
+<a name="2.2"></a>
+<div><b>Java Persistence 2.2 Schema Resources</b></div>
+<div class="contentdivider"><hr /> </div>
+<p>This table contains the XML Schema components for Java Persistence 2.2.</p>
+<p>
+<table width="100%" border="1" cellpadding="3">
+<tbody>
+<tr>
+<th><span class="body">Date Published</span></th>
+<th><span class="body">File Name</span></th>
+<th><span class="body">Description</span></th>
+<th><span class="body">Status</span></th>
+</tr>
+<tr>
+<td><span class="body">August 4, 2017</span></td>
+<td><span class="body"><a href="orm_2_2.xsd"><code>orm_2_2.xsd</code></a></span></td>
+<td><span class="body">Object/relational mapping file schema</span></td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">August 4, 2017</span></td>
+<td><span class="body"><a href="persistence_2_2.xsd"><code>persistence_2_2.xsd</code></a></span></td>
+<td><span class="body">Persistence configuration schema</span></td>
+<td><span class="body">Final Release</span></td>
+</tr>
+</table>
+</p>
+<br/>
+<br/>
+<a name="2.1"></a>
+<div><b>Java Persistence 2.1 Schema Resources</b></div>
+<div class="contentdivider"><hr /> </div>
+<p>This table contains the XML Schema components for Java Persistence 2.1.</p>
+<p>
+<table width="100%" border="1" cellpadding="3">
+<tbody>
+<tr>
+<th><span class="body">Date Published</span></th>
+<th><span class="body">File Name</span></th>
+<th><span class="body">Description</span></th>
+<th><span class="body">Status</span></th>
+</tr>
+<tr>
+<td><span class="body">April 22, 2013</span></td>
+<td><span class="body"><a href="orm_2_1.xsd"><code>orm_2_1.xsd</code></a></span></td>
+<td><span class="body">Object/relational mapping file schema</span></td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">April 22, 2013</span></td>
+<td><span class="body"><a href="persistence_2_1.xsd"><code>persistence_2_1.xsd</code></a></span></td>
+<td><span class="body">Persistence configuration schema</span></td>
+<td><span class="body">Final Release</span></td>
+</tr>
+</table>
+</p>
+<br/>
+<br/>
+<a name="2.0"></a>
+<div><b>Java Persistence 2.0 Schema Resources</b></div>
+<div class="contentdivider"><hr /> </div>
+<p>This table contains the XML Schema components for Java Persistence 2.0.</p>
+<p>
+<table width="100%" border="1" cellpadding="3">
+<tbody>
+<tr>
+<th><span class="body">Date Published</span></th>
+<th><span class="body">File Name</span></th>
+<th><span class="body">Description</span></th>
+<th><span class="body">Status</span></th>
+</tr>
+<tr>
+<td><span class="body">December 10, 2009</span></td>
+<td><span class="body"><a href="orm_2_0.xsd"><code>orm_2_0.xsd</code></a></span></td>
+<td><span class="body">Object/relational mapping file schema</span></td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">December 10, 2009</span></td>
+<td><span class="body"><a href="persistence_2_0.xsd"><code>persistence_2_0.xsd</code></a></span></td>
+<td><span class="body">Persistence configuration schema</span></td>
+<td><span class="body">Final Release</span></td>
+</tr>
+</table>
+</p>
+<br/>
+<br/>
+<a name="1.0"></a>
+<div><b>Java Persistence 1.0 Schema Resources</b></div>
+<div class="contentdivider"><hr /> </div>
+<p>This table contains the XML Schema components for Java Persistence 1.0.</p>
+<p>
+<table width="100%" border="1" cellpadding="3">
+<tbody>
+<tr>
+<th><span class="body">Date Published</span></th>
+<th><span class="body">File Name</span></th>
+<th><span class="body">Description</span></th>
+<th><span class="body">Status</span></th>
+</tr>
+<tr>
+<td><span class="body">May 11, 2006</span></td>
+<td><span class="body"><a href="orm_1_0.xsd"><code>orm_1_0.xsd</code></a></span></td>
+<td><span class="body">Object/relational mapping file schema</span></td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">May 11, 2006</span></td>
+<td><span class="body"><a href="persistence_1_0.xsd"><code>persistence_1_0.xsd</code></a></span></td>
+<td><span class="body">Persistence configuration schema</span></td>
+<td><span class="body">Final Release</span></td>
+</tr>
+</table>
+</p>
+<!-- =================== -->
+<!-- END OF MAIN CONTENT -->
+<!-- =================== -->
+</body>
+</html>
