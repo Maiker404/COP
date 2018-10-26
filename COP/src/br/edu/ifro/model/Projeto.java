@@ -1,4 +1,5 @@
 package br.edu.ifro.model;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,9 +11,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+
 @Entity
 public class Projeto implements Serializable {
-    @Id 
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idProjeto;
     @Column
@@ -23,12 +26,17 @@ public class Projeto implements Serializable {
     private String nome;
     @Column
     private String descricao;
-    @Column    
+    @Column
     @ManyToMany
     private List<Usuario> equipe;
-    @Column    
+    @Column
     @OneToMany
     private List<Tarefa> tarefas;
+
+    @Override
+    public String toString() {
+        return "Codigo: "+this.idProjeto + " - Nome: " + this.nome+" - Equipe: "+this.equipe.size()+" pessoas - Tarefas: "+this.tarefas.size();
+    }
 
     public Integer getIdProjeto() {
         return idProjeto;

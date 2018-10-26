@@ -18,7 +18,7 @@
                <content>
                 <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="672.0" prefWidth="945.0" style="-fx-border-width: 0px;">
                      <children>
-                        <Label layoutX="33.0" layoutY="14.0" style="-fx-text-fill: #353535;" text="Cadastro de projeto" textFill="WHITE">
+                        <Label layoutX="33.0" layoutY="14.0" style="-fx-text-fill: #353535;" text="Projetos" textFill="WHITE">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -26,14 +26,14 @@
                         <JFXTextField fx:id="nome" labelFloat="true" layoutX="33.0" layoutY="64.0" prefHeight="25.0" prefWidth="423.0" promptText="Nome do projeto" />
                         <JFXTextField fx:id="dataFinal" labelFloat="true" layoutX="247.0" layoutY="102.0" prefHeight="25.0" prefWidth="210.0" promptText="Data de entrega" />
                         <JFXTextArea fx:id="desc" labelFloat="true" layoutX="34.0" layoutY="146.0" prefHeight="123.0" prefWidth="424.0" promptText="Descrição" />
-                        <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="644.0" layoutY="29.0" onAction="#onLimpar" prefHeight="78.0" prefWidth="118.0" style="-fx-background-color: #5d5d5d;" text="Limpar" textFill="WHITE">
+                        <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="644.0" layoutY="29.0" onAction="#onLimpar" prefHeight="78.0" prefWidth="118.0" ripplerFill="#c41414e4" style="-fx-background-color: #5d5d5d;" text="Limpar" textFill="WHITE">
                            <graphic>
-                              <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="TRASH" size="4em" />
+                              <FontAwesomeIcon glyphStyle="-fx-fill:#ff3333" iconName="TRASH" size="4em" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="776.0" layoutY="29.0" onAction="#onSalvar" prefHeight="95.0" prefWidth="144.0" style="-fx-background-color: #5d5d5d;" text="Salvar" textFill="WHITE">
+                        <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="776.0" layoutY="29.0" onAction="#onSalvar" prefHeight="95.0" prefWidth="144.0" ripplerFill="#26c21be9" style="-fx-background-color: #5d5d5d;" text="Salvar" textFill="WHITE">
                            <graphic>
-                              <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="FILE" size="4em" />
+                              <FontAwesomeIcon glyphStyle="-fx-fill:#00cc00" iconName="FILE" size="4em" />
                            </graphic>
                         </JFXButton>
                         <Label layoutX="485.0" layoutY="349.0" style="-fx-text-fill: #353535;" text="Equipe" textFill="WHITE" />
@@ -49,17 +49,22 @@
                               <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="SEARCH" size="1.7em" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton contentDisplay="CENTER" layoutX="866.0" layoutY="336.0" onAction="#deleteUser" prefHeight="41.0" prefWidth="54.0" ripplerFill="#d73330" style="-fx-background-color: #5d5d5d;" text=" ">
+                        <JFXButton contentDisplay="CENTER" layoutX="866.0" layoutY="336.0" onAction="#deleteUser" prefHeight="41.0" prefWidth="54.0" ripplerFill="#d63431f1" style="-fx-background-color: #5d5d5d;" text=" ">
                            <graphic>
-                              <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="CLOSE" size="1.8em" />
+                              <FontAwesomeIcon glyphStyle="-fx-fill:#ff3333" iconName="CLOSE" size="1.8em" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton contentDisplay="CENTER" layoutX="408.0" layoutY="327.0" onAction="#addUser" prefHeight="41.0" prefWidth="54.0" ripplerFill="#30cd22" style="-fx-background-color: #5d5d5d;" text=" ">
+                        <JFXButton contentDisplay="CENTER" layoutX="408.0" layoutY="327.0" onAction="#addUser" prefHeight="41.0" prefWidth="54.0" ripplerFill="#17bfcff1" style="-fx-background-color: #5d5d5d;" text=" ">
                            <graphic>
-                              <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="PLUS" size="1.8em" />
+                              <FontAwesomeIcon glyphStyle="-fx-fill:cyan" iconName="PLUS" size="1.8em" />
                            </graphic>
                         </JFXButton>
                         <JFXButton contentDisplay="CENTER" layoutX="335.0" layoutY="328.0" onAction="#Searchuser" prefHeight="40.0" prefWidth="64.0" ripplerFill="#c1c9d0" style="-fx-background-color: #5d5d5d;" text=" ">
+                           <graphic>
+                              <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="SEARCH" size="1.7em" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="CENTER" layoutX="462.0" layoutY="53.0" onAction="#onProcurar" prefHeight="38.0" prefWidth="58.0" ripplerFill="#c0c8cf00" style="-fx-background-color: #5b5b5b;" text=" " textFill="#000000db">
                            <graphic>
                               <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="SEARCH" size="1.7em" />
                            </graphic>

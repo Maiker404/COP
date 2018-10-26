@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="543.0" prefWidth="703.0" stylesheets="@../../css/estilos.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.edu.ifro.control.adm.ListagemDeItensController">
+   <children>
+      <StackPane fx:id="stackPane" prefHeight="543.0" prefWidth="703.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <JFXListView fx:id="listSelect" layoutX="33.0" layoutY="20.0" prefHeight="370.0" prefWidth="637.0" />
+                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="104.0" layoutY="412.0" onAction="#onCancel" prefHeight="111.0" prefWidth="167.0" style="-fx-background-color: #5d5d5d;" text="Cancelar" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#ff3333" iconName="CLOSE" size="4em" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="437.0" layoutY="412.0" onAction="#onSelect" prefHeight="111.0" prefWidth="167.0" style="-fx-background-color: #5d5d5d;" text="Selecionar" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#00cc00" iconName="CHECK" size="4em" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

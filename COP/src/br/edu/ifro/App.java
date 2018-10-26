@@ -14,6 +14,7 @@ public class App extends Application {
 //        Parent root = FXMLLoader.load(getClass().getResource("viewer/Login.fxml"));
         Parent root = FXMLLoader.load(getClass().getResource("viewer/adm/CadastroProjeto.fxml"));
 //        Parent root = FXMLLoader.load(getClass().getResource("viewer/adm/CadastroUsuario.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("viewer/adm/ListagemDeItens.fxml"));
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         root.setOnMousePressed((MouseEvent event) -> {
