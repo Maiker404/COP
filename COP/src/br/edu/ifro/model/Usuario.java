@@ -1,5 +1,7 @@
 package br.edu.ifro.model;
+import com.google.common.hash.Hashing;
 import java.io.Serializable;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -54,7 +56,7 @@ public class Usuario implements Serializable {
     }
 
     public String getSenha() {
-        return senha;
+        return Hashing.sha256().hashString(senha, StandardCharsets.UTF_8).toString();
     }
 
     public void setSenha(String senha) {

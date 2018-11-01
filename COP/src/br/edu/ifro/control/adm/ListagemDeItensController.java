@@ -8,6 +8,9 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventDispatchChain;
+import javafx.event.EventDispatcher;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.StackPane;
@@ -47,8 +50,8 @@ public class ListagemDeItensController implements Initializable {
                 break;
         }
         List<Usuario> user = query.getResultList();
-        ObservableList users = FXCollections.observableArrayList(user);
-        this.listSelect.setItems(users);
+        ObservableList lista = FXCollections.observableArrayList(user);
+        this.listSelect.setItems(lista);
     }
     @FXML
     private void onCancel(ActionEvent event) {
@@ -58,5 +61,7 @@ public class ListagemDeItensController implements Initializable {
 
     @FXML
     private void onSelect(ActionEvent event) {
+        Stage g=(Stage)this.stackPane.getScene().getWindow();
+        
     }
 }

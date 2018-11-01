@@ -1,6 +1,7 @@
 package br.edu.ifro.control;
 import br.edu.ifro.model.Usuario;
 import br.edu.ifro.utils.PersistenceProperties;
+import com.google.common.hash.Hashing;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
 import  javafx.stage.Stage ;
@@ -8,6 +9,7 @@ import  java.io.IOException ;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -91,7 +93,7 @@ public class LoginController implements Initializable {
             this.txtUser.setStyle("-fx-prompt-text-fill:green;-fx-text-fill:white;-jfx-focus-color:green;-jfx-unfocus-color:green;");
             this.infoUser.setText("Sucess!");
             this.infoUser.setStyle("-fx-text-fill:green;");
-            if(user.get(0).getSenha().equals(this.txtPass.getText())){
+            if(user.get(0).getSenha().equals(Hashing.sha256().hashString(this.txtPass.getText(), StandardCharsets.UTF_8).toString())){
                 this.type = user.get(0).getPermisao().equals("Adminstrador");
                 this.txtPass.setStyle("-fx-prompt-text-fill:green;-fx-text-fill:#353535;-jfx-focus-color:green;-jfx-unfocus-color:green;");
                 this.infoPass.setText("Sucess!");
