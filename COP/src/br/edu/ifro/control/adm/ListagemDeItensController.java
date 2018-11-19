@@ -1,16 +1,18 @@
 package br.edu.ifro.control.adm;
+import br.edu.ifro.model.Projeto;
 import br.edu.ifro.model.Usuario;
 import br.edu.ifro.utils.PersistenceProperties;
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
 import com.jfoenix.controls.JFXListView;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventDispatchChain;
-import javafx.event.EventDispatcher;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.StackPane;
@@ -62,6 +64,6 @@ public class ListagemDeItensController implements Initializable {
     @FXML
     private void onSelect(ActionEvent event) {
         Stage g=(Stage)this.stackPane.getScene().getWindow();
-        
+        g.close();
     }
 }
