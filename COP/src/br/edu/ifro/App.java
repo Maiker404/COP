@@ -11,12 +11,8 @@ public class App extends Application {
     private double x,y;
     @Override
     public void start(final Stage stage) throws Exception {
-//        Parent root = FXMLLoader.load(getClass().getResource("viewer/Login.fxml"));
-        Parent root = FXMLLoader.load(getClass().getResource("viewer/adm/CadastroProjeto.fxml"));
-//        Parent root = FXMLLoader.load(getClass().getResource("viewer/adm/CadastroUsuario.fxml"));
-//        Parent root = FXMLLoader.load(getClass().getResource("viewer/adm/ListagemDeItens.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("viewer/CadastroUsuario.fxml"));
         Scene scene = new Scene(root);
-        scene.setFill(Color.TRANSPARENT);
         root.setOnMousePressed((MouseEvent event) -> {
             x=event.getSceneX();
             y=event.getSceneY();
@@ -26,7 +22,7 @@ public class App extends Application {
             stage.setY(event.getScreenY()-y);
         });
         stage.setScene(scene);
-        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.setTitle("Login");
         stage.setResizable(false);
         stage.show();
     }
