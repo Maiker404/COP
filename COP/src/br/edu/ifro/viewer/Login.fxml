@@ -15,26 +15,14 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="450.0" stylesheets="@../css/estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.LoginController">
    <children>
-      <AnchorPane layoutY="-1.0" prefHeight="25.0" prefWidth="450.0" style="-fx-background-color: #353535;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
-         <children>
-            <Label prefHeight="30.0" prefWidth="122.0" style="-fx-text-fill: white;" styleClass="title-pane-label" text="Login" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-            </Label>
-         </children>
-      </AnchorPane>
       <StackPane fx:id="stack" layoutY="29.0" prefHeight="593.0" prefWidth="450.0">
          <children>
-            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="450.0" styleClass="parent">
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="450.0" styleClass="parent">
                <children>
                   <JFXTextField fx:id="txtUser" labelFloat="true" layoutX="99.0" layoutY="278.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#autenticar" prefHeight="25.0" prefWidth="259.0" promptText="Usuario" styleClass="jfx-text-field" unFocusColor="#212121" />
                   <JFXPasswordField fx:id="txtPass" labelFloat="true" layoutX="99.0" layoutY="349.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#autenticar" prefHeight="25.0" prefWidth="259.0" promptText="Senha" styleClass="jfx-password-field" />
-                  <JFXButton layoutX="99.0" layoutY="428.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#autenticar" prefHeight="74.0" prefWidth="259.0" ripplerFill="#6f6f6f" style="-fx-background-color: #353535; -fx-text-fill: #ffffff;" text="Logar" textFill="#ffffff57" />
-                  <JFXButton layoutX="183.0" layoutY="511.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#exitSoft" prefHeight="40.0" prefWidth="92.0" ripplerFill="#353535" style="-fx-background-color: #5d5d5d; -fx-text-fill: #ffffff;" text="Sair" textFill="#ffffff57" textOverrun="WORD_ELLIPSIS" />
+                  <JFXButton layoutX="100.0" layoutY="400.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#autenticar" prefHeight="53.0" prefWidth="259.0" ripplerFill="#61db56" style="-fx-background-color: #27927A; -fx-text-fill: #ffffff;" text="Logar" textFill="#ffffff57" />
+                  <JFXButton layoutX="179.0" layoutY="540.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#exitSoft" prefHeight="40.0" prefWidth="92.0" ripplerFill="#f48747" style="-fx-background-color: #e43300; -fx-text-fill: #ffffff;" text="Sair" textFill="#ffffff57" textOverrun="WORD_ELLIPSIS" />
                   <Label fx:id="infoPass" layoutX="99.0" layoutY="383.0" prefHeight="17.0" prefWidth="259.0" />
                   <Label fx:id="infoUser" layoutX="105.0" layoutY="315.0" prefHeight="17.0" prefWidth="259.0" />
                   <ImageView fitHeight="254.0" fitWidth="259.0" layoutX="107.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -42,7 +30,12 @@
                         <Image url="@../image/Logo.png" />
                      </image>
                   </ImageView>
-                  <JFXButton layoutX="349.0" layoutY="553.0" onAction="#openConfigBD" prefHeight="28.0" prefWidth="92.0" ripplerFill="#353535" style="-fx-background-color: #5d5d5d;" text=" Configuração" textFill="WHITE" />
+                  <JFXButton layoutX="159.0" layoutY="469.0" onAction="#openConfigBD" prefHeight="53.0" prefWidth="137.0" ripplerFill="#76e9f8" style="-fx-background-color: #0783c5;" text=" Configuração" textFill="WHITE" />
+                  <Label layoutX="200.0" layoutY="-26.0" text="COP">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
          </children>
