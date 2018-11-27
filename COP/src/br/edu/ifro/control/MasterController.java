@@ -1,4 +1,4 @@
-package br.edu.ifro.control.adm;
+package br.edu.ifro.control;
 import br.edu.ifro.model.Usuario;
 import java.io.IOException;
 import java.net.URL;
@@ -11,7 +11,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-public class MasterAdmController implements Initializable {
+public class MasterController implements Initializable {
     private AnchorPane dash,project,user;
     @FXML
     private StackPane stackPane;

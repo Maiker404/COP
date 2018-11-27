@@ -1,12 +1,10 @@
-package br.edu.ifro.control.adm;
+package br.edu.ifro.control;
 
 import br.edu.ifro.model.Usuario;
-import br.edu.ifro.utils.Gerador;
 import br.edu.ifro.utils.PersistenceProperties;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
-import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
@@ -93,8 +91,6 @@ public class CadastroUsuarioController implements Initializable {
             content.setStyle("-fx-background-color: #353535;");
             content.setBody(body);
         } catch (Exception ex) {
-            Pane p=new Gerador().headPane("ERRO","/br/edu/ifro/image/alerta.png","-fx-text-color:black;", "-fx-background-color:white;");
-            content.setHeading(p);
             body.setStyle("-fx-text-color:red;");
             body.setText("Usuario já existe no sistema!");
             content.setBody(body);

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.MasterController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D9D9D9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="323.0" fitWidth="348.0" layoutX="249.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Logo.png" />
+               </image>
+               <effect>
+                  <DropShadow height="44.73" offsetY="3.5" radius="19.64" width="35.83" />
+               </effect>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="89.0" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Projetos" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="283.0" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Usuarios" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="185.0" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Tarefas" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="606.0" layoutY="185.0" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Criar Tarefa" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="606.0" layoutY="283.0" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Cadastrar Usuario" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="606.0" layoutY="89.0" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Criar Projeto" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="351.0" layoutY="424.0" prefHeight="42.0" prefWidth="120.0" ripplerFill="#d71d1d" style="-fx-background-color: #27927A;" text="Sair" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

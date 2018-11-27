@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.ifro.control.adm;
+package br.edu.ifro.control;
 
 import com.jfoenix.controls.JFXButton;
 import java.net.URL;
