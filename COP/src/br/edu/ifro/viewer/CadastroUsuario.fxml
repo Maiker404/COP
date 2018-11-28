@@ -18,8 +18,8 @@
                <children>
                   <Pane prefHeight="452.0" prefWidth="720.0" style="-fx-background-color: transparent;">
                      <children>
-                        <Separator layoutX="43.0" layoutY="58.0" prefHeight="2.0" prefWidth="620.0" style="-fx-background-color: #353535;" />
-                        <Label layoutX="53.0" layoutY="22.0" prefHeight="26.0" prefWidth="144.0" style="-fx-text-fill: #353535; -fx-font-size: 25px;" text="Informações" />
+                        <Separator layoutX="164.0" layoutY="57.0" prefHeight="2.0" prefWidth="310.0" style="-fx-background-color: #353535;" />
+                        <Label layoutX="279.0" layoutY="21.0" prefHeight="26.0" prefWidth="144.0" style="-fx-text-fill: #353535; -fx-font-size: 25px;" text="Usuário" />
                         <JFXTextField fx:id="txtFuncao" focusColor="#27927a" labelFloat="true" layoutX="280.0" layoutY="131.0" onAction="#cadastro" prefHeight="25.0" prefWidth="330.0" promptText="Função" styleClass="jfx-text-field" />
                         <JFXComboBox fx:id="cbxPerm" focusColor="#27927a" labelFloat="true" layoutX="64.0" layoutY="123.0" prefHeight="33.0" prefWidth="200.0" promptText="Permissão" styleClass="jfx-text-field" />
                         <JFXTextField fx:id="txtPass" focusColor="#27927a" labelFloat="true" layoutX="350.0" layoutY="80.0" onAction="#cadastro" prefHeight="25.0" prefWidth="260.0" promptText="Senha" styleClass="jfx-text-field" />
@@ -32,20 +32,30 @@
                         <JFXTextField fx:id="txtBairro" focusColor="#27927a" labelFloat="true" layoutX="341.0" layoutY="364.0" onAction="#cadastro" prefHeight="25.0" prefWidth="270.0" promptText="Bairro" styleClass="jfx-text-field" />
                         <JFXTextField fx:id="txtCep" focusColor="#27927a" labelFloat="true" layoutX="217.0" layoutY="364.0" onAction="#cadastro" prefHeight="25.0" prefWidth="113.0" promptText="CEP" styleClass="jfx-text-field" />
                         <JFXTextField fx:id="txtRua" focusColor="#27927a" labelFloat="true" layoutX="66.0" layoutY="314.0" onAction="#cadastro" prefHeight="25.0" prefWidth="545.0" promptText="Rua" styleClass="jfx-text-field" />
-                        <JFXTextField fx:id="txtFuncao1" focusColor="#27927a" labelFloat="true" layoutX="64.0" layoutY="175.0" onAction="#cadastro" prefHeight="25.0" prefWidth="546.0" promptText="Função" styleClass="jfx-text-field" />
+                        <JFXTextField fx:id="txtEmail" focusColor="#27927a" labelFloat="true" layoutX="64.0" layoutY="175.0" onAction="#cadastro" prefHeight="25.0" prefWidth="546.0" promptText="E-mail" styleClass="jfx-text-field" />
                      </children>
                   </Pane>
-                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="88.0" layoutY="466.0" onAction="#cadastro" prefHeight="118.0" prefWidth="169.0" ripplerFill="#61db56" style="-fx-background-color: #27927A; -fx-text-fill: white;" text="Cadastrar">
+                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="66.0" layoutY="466.0" onAction="#cadastro" prefHeight="118.0" prefWidth="153.0" ripplerFill="#61db56" style="-fx-background-color: #27927A; -fx-text-fill: white;" text="Cadastrar">
                      <graphic>
                         <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="SAVE" size="5em" />
                      </graphic></JFXButton>
-                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="276.0" layoutY="485.0" onAction="#novo" prefHeight="99.0" prefWidth="169.0" ripplerFill="#76e9f8" style="-fx-background-color: #0783C5; -fx-text-fill: white;" text="Novo">
+                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="228.0" layoutY="486.0" onAction="#novo" prefHeight="98.0" prefWidth="132.0" ripplerFill="#76e9f8" style="-fx-background-color: #0783C5; -fx-text-fill: white;" text="Novo">
                      <graphic>
                         <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="PLUS" size="4.4em" />
                      </graphic></JFXButton>
-                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="463.0" layoutY="514.0" onAction="#excluir" prefHeight="70.0" prefWidth="132.0" ripplerFill="#f48747" style="-fx-background-color: #E43300; -fx-text-fill: white;" text="Excluir">
+                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="506.0" layoutY="514.0" onAction="#excluir" prefHeight="70.0" prefWidth="104.0" ripplerFill="#f48747" style="-fx-background-color: #E43300; -fx-text-fill: white;" text="Excluir">
                      <graphic>
                         <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="TRASH" size="3.4em" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="373.0" layoutY="495.0" onAction="#onEditar" prefHeight="89.0" prefWidth="121.0" ripplerFill="#e49621" style="-fx-background-color: #ee7c12;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="PENCIL" size="4.4em" wrappingWidth="41.14285707473755" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="CENTER" layoutX="22.0" layoutY="23.0" onAction="#onHome" prefHeight="32.0" prefWidth="34.0" ripplerFill="#c0c8cf00" style="-fx-background-color: #5b5b5b;" text=" " textFill="#000000db">
+                     <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="HOME" size="1.7em" />
                      </graphic>
                   </JFXButton>
                </children>

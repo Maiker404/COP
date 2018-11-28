@@ -11,27 +11,34 @@
 
 <AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="1080.0" style="-fx-background-color: #d9d9d9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.control.adm.CadastroTarefaController">
    <children>
-      <Label layoutX="81.0" layoutY="25.0" prefHeight="45.0" prefWidth="641.0" text="Cadastro de tarefas">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Label>
-      <JFXTextField layoutX="84.0" layoutY="104.0" prefHeight="25.0" prefWidth="899.0" promptText="Nome" />
-      <JFXComboBox layoutX="83.0" layoutY="165.0" prefHeight="25.0" prefWidth="428.0" promptText="Projeto" />
-      <JFXTextArea layoutX="83.0" layoutY="222.0" prefHeight="162.0" prefWidth="899.0" promptText="Descrição" />
+      <JFXTextField fx:id="txtDataEntrega" layoutX="83.0" layoutY="114.0" prefHeight="25.0" prefWidth="899.0" promptText="Data Entrega" />
+      <JFXComboBox fx:id="cbxProjeto" layoutX="83.0" layoutY="165.0" prefHeight="25.0" prefWidth="428.0" promptText="Projeto" />
+      <JFXTextArea fx:id="txtDescricao" layoutX="83.0" layoutY="222.0" prefHeight="162.0" prefWidth="899.0" promptText="Descrição" />
       <JFXButton fx:id="btnSalvaTarefa" alignment="CENTER" contentDisplay="TOP" layoutX="64.0" layoutY="430.0" onAction="#salvarTarefa" prefHeight="123.0" prefWidth="173.0" ripplerFill="#61db56" style="-fx-background-color: #27927a;" text="Salvar" textAlignment="CENTER" textFill="WHITE">
          <graphic>
-            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="SAVE" size="5em" textAlignment="CENTER" />
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="SAVE" onDragDetected="#onSalvar" size="5em" textAlignment="CENTER" />
          </graphic></JFXButton>
-      <JFXButton fx:id="btnNovoTarefa" alignment="CENTER" contentDisplay="TOP" layoutX="258.0" layoutY="451.0" onAction="#novoTarefa" prefHeight="102.0" prefWidth="150.0" ripplerFill="#76e9f8" style="-fx-background-color: #0783c5;" text="Novo" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton fx:id="btnNovoTarefa" alignment="CENTER" contentDisplay="TOP" layoutX="258.0" layoutY="442.0" onAction="#novoTarefa" prefHeight="111.0" prefWidth="150.0" ripplerFill="#76e9f8" style="-fx-background-color: #0783c5;" text="Novo" textAlignment="CENTER" textFill="WHITE">
          <graphic>
-            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="PLUS" size="4.4em" wrappingWidth="41.14285707473755" />
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="PLUS" onDragDetected="#onNovo" size="4.4em" wrappingWidth="41.14285707473755" />
          </graphic></JFXButton>
-      <JFXButton fx:id="btnCancelaTarefa" alignment="CENTER" contentDisplay="TOP" layoutX="428.0" layoutY="475.0" onAction="#cancelaTarefa" prefHeight="78.0" prefWidth="136.0" ripplerFill="#f48747" style="-fx-background-color: #e43300;" text="Cancelar" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton fx:id="btnCancelaTarefa" alignment="CENTER" contentDisplay="TOP" layoutX="586.0" layoutY="481.0" onAction="#onExcluir" prefHeight="72.0" prefWidth="136.0" ripplerFill="#f48747" style="-fx-background-color: #e43300;" text="Excluir" textAlignment="CENTER" textFill="WHITE">
          <graphic>
             <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="TRASH" size="3.4em" />
          </graphic></JFXButton>
-      <JFXComboBox layoutX="555.0" layoutY="165.0" prefHeight="25.0" prefWidth="428.0" promptText="Encarregado" />
-      <Separator layoutX="81.0" layoutY="69.0" prefHeight="0.0" prefWidth="899.0" style="-fx-background-color: #353535;" />
+      <JFXComboBox fx:id="cbxEncarregado" layoutX="555.0" layoutY="165.0" prefHeight="25.0" prefWidth="428.0" promptText="Encarregado" />
+      <Separator layoutX="283.0" layoutY="68.0" prefHeight="0.0" prefWidth="428.0" style="-fx-background-color: #353535;" />
+      <JFXButton fx:id="btnNovoTarefa1" alignment="CENTER" contentDisplay="TOP" layoutX="422.0" layoutY="462.0" onAction="#onEditar" prefHeight="91.0" prefWidth="150.0" ripplerFill="#e49621" style="-fx-background-color: #ee7c12;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="PENCIL" size="4.4em" wrappingWidth="41.14285707473755" />
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="txtNome" layoutX="83.0" layoutY="79.0" prefHeight="25.0" prefWidth="899.0" promptText="Nome" />
+      <Label layoutX="483.0" layoutY="33.0" prefHeight="26.0" prefWidth="144.0" style="-fx-text-fill: #353535; -fx-font-size: 25px;" text="Tarefa" />
+      <JFXButton contentDisplay="CENTER" layoutX="22.0" layoutY="23.0" onAction="#onHome" prefHeight="32.0" prefWidth="34.0" ripplerFill="#c0c8cf00" style="-fx-background-color: #5b5b5b;" text=" " textFill="#000000db">
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="HOME" size="1.7em" />
+         </graphic>
+      </JFXButton>
    </children>
 </AnchorPane>

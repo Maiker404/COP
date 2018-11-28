@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.viewer.RelatorioController">
+   <children>
+      <Pane layoutY="-7.0" prefHeight="653.0" prefWidth="600.0" style="-fx-background-color: #d9d9d9;">
+         <children>
+            <Separator layoutX="133.0" layoutY="60.0" prefHeight="1.0" prefWidth="307.0" style="-fx-background-color: #353535;" />
+            <Label layoutX="237.0" layoutY="24.0" prefHeight="26.0" prefWidth="144.0" style="-fx-text-fill: #353535; -fx-font-size: 25px;" text="Relatorio" />
+            <JFXTextField fx:id="txtDataInicial" layoutX="46.0" layoutY="138.0" prefHeight="25.0" prefWidth="205.0" promptText="Data Inicial" />
+            <JFXTextField fx:id="txtDataFinal" layoutX="345.0" layoutY="138.0" prefHeight="25.0" prefWidth="190.0" promptText="Data Final" />
+            <JFXComboBox fx:id="cbxTipo" layoutX="134.0" layoutY="84.0" prefHeight="25.0" prefWidth="307.0" promptText="Tipo" />
+            <JFXListView layoutX="39.0" layoutY="188.0" prefHeight="351.0" prefWidth="505.0" />
+            <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="215.0" layoutY="550.0" onAction="#cadastro" prefHeight="75.0" prefWidth="153.0" ripplerFill="#61db56" style="-fx-background-color: #27927A; -fx-text-fill: white;" text="Gerar">
+               <graphic>
+                  <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="CHECK" size="5em" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+      <JFXButton contentDisplay="CENTER" layoutX="32.0" layoutY="33.0" onAction="#onHome" prefHeight="32.0" prefWidth="34.0" ripplerFill="#c0c8cf00" style="-fx-background-color: #5b5b5b;" text=" " textFill="#000000db">
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:white" iconName="HOME" size="1.7em" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

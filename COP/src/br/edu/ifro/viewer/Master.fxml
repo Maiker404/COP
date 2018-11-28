@@ -24,37 +24,42 @@
                   <DropShadow height="44.73" offsetY="3.5" radius="19.64" width="35.83" />
                </effect>
             </ImageView>
-            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="89.0" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Projetos" textFill="WHITE">
+            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="89.0" onAction="#onProjetos" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Projetos" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="283.0" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Usuarios" textFill="WHITE">
+            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="283.0" onAction="#onUsuarios" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Usuarios" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="185.0" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Tarefas" textFill="WHITE">
+            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="185.0" onAction="#onTarefas" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Tarefas" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="606.0" layoutY="185.0" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Criar Tarefa" textFill="WHITE">
+            <JFXButton buttonType="RAISED" layoutX="606.0" layoutY="185.0" onAction="#onCriarTarefa" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Criar Tarefa" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="606.0" layoutY="283.0" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Cadastrar Usuario" textFill="WHITE">
+            <JFXButton buttonType="RAISED" layoutX="606.0" layoutY="283.0" onAction="#onCadastrarUsuario" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Cadastrar Usuario" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="606.0" layoutY="89.0" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Criar Projeto" textFill="WHITE">
+            <JFXButton buttonType="RAISED" layoutX="606.0" layoutY="89.0" onAction="#onCriarProjeto" prefHeight="82.0" prefWidth="172.0" ripplerFill="#61db56" style="-fx-background-color: #27927A;" text="Criar Projeto" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="351.0" layoutY="424.0" prefHeight="42.0" prefWidth="120.0" ripplerFill="#d71d1d" style="-fx-background-color: #27927A;" text="Sair" textFill="WHITE">
+            <JFXButton layoutX="249.0" layoutY="424.0" onAction="#onRelatorio" prefHeight="42.0" prefWidth="120.0" ripplerFill="#d71d1d" style="-fx-background-color: #27927A;" text="Relatório" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="452.0" layoutY="424.0" onAction="#onSair" prefHeight="42.0" prefWidth="120.0" ripplerFill="#d71d1d" style="-fx-background-color: #27927A;" text="Sair" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="15.0" />
                </font>
