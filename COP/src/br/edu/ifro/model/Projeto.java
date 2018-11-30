@@ -1,9 +1,9 @@
 package br.edu.ifro.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
-import javafx.collections.ObservableList;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,9 +19,9 @@ public class Projeto implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idProjeto;
     @Column
-    private String dataFinal;
+    private LocalDate dataFinal;
     @Column
-    private String dataInicial;
+    private LocalDate dataInicial;
     @Column
     private String nome;
     @Column
@@ -35,7 +35,7 @@ public class Projeto implements Serializable {
 
     @Override
     public String toString() {
-        return "Codigo: "+this.idProjeto + " - Nome: " + this.nome+" - Equipe: "+this.equipe.size()+" pessoas - Tarefas: "+this.tarefas.size();
+        return "Codigo: "+this.getIdProjeto() + " - Nome: " + this.getNome()+" - Equipe: "+this.getEquipe().size()+" pessoas - Tarefas: "+this.getTarefas().size();
     }
 
     public Integer getIdProjeto() {
@@ -78,19 +78,19 @@ public class Projeto implements Serializable {
         this.tarefas = tarefas;
     }
 
-    public String getDataFinal() {
+    public LocalDate getDataFinal() {
         return dataFinal;
     }
 
-    public void setDataFinal(String dataFinal) {
+    public void setDataFinal(LocalDate dataFinal) {
         this.dataFinal = dataFinal;
     }
 
-    public String getDataInicial() {
+    public LocalDate getDataInicial() {
         return dataInicial;
     }
 
-    public void setDataInicial(String dataInicial) {
+    public void setDataInicial(LocalDate dataInicial) {
         this.dataInicial = dataInicial;
     }
 }

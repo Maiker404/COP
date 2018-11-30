@@ -53,6 +53,8 @@ public class CadastroUsuarioController implements Initializable {
     private JFXTextField txtRua;
     @FXML
     private JFXTextField txtNumero;
+    @FXML
+    private JFXTextField txtEmail;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -66,7 +68,7 @@ public class CadastroUsuarioController implements Initializable {
 
     @FXML
     private void cadastro(ActionEvent event) throws IOException {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("COP",new PersistenceProperties().get());
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("COP");
         EntityManager em = emf.createEntityManager();
         Usuario u = new Usuario();
         u.setUser(txtUser.getText());
@@ -79,8 +81,9 @@ public class CadastroUsuarioController implements Initializable {
         u.setFuncao(txtFuncao.getText());
         u.setRua(txtRua.getText());
         u.setBairro(txtBairro.getText());
-        u.setCep(txtCep.getText());
         u.setNumero(txtNumero.getText());
+        u.setEmail(txtEmail.getText());
+        u.setCep(txtCep.getText());
         em.getTransaction().begin();
         JFXDialogLayout content = new JFXDialogLayout();
         Label body=new Label();
@@ -106,5 +109,14 @@ public class CadastroUsuarioController implements Initializable {
 
     @FXML
     private void excluir(ActionEvent event) {
+    }
+
+    @FXML
+    private void onEditar(ActionEvent event) {
+        
+    }
+
+    @FXML
+    private void onHome(ActionEvent event) {
     }
 }

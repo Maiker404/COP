@@ -37,11 +37,8 @@ public class LoginController implements Initializable {
     private Label infoPass;
     @FXML
     private Label infoUser;
-    
-    private boolean type;
     @FXML
     private StackPane stack;
-    private double x,y;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }
@@ -52,25 +49,11 @@ public class LoginController implements Initializable {
                 Parent reroot;
                 Stage estagio = (Stage) stack.getScene().getWindow();
                 estagio.close();
-                if(this.type==true){
-                    reroot = FXMLLoader.load(getClass().getResource("/br/edu/ifro/viewer/adm/MasterAdm.fxml"));
-                }else{
-                    reroot = FXMLLoader.load(getClass().getResource("/br/edu/ifro/viewer/communal/MasterCommunal.fxml"));
-                }
+                reroot = FXMLLoader.load(getClass().getResource("/br/edu/ifro/viewer/Master.fxml"));
                 Scene scene = new Scene(reroot);
-                scene.setFill(Color.TRANSPARENT);
                 Stage janela = new Stage();
-                reroot.setOnMousePressed((MouseEvent e) -> {
-                    x=e.getSceneX();
-                    y=e.getSceneY();
-                });
-                reroot.setOnMouseDragged((MouseEvent e) -> {
-                    janela.setX(e.getScreenX()-x);
-                    janela.setY(e.getScreenY()-y);
-                });
                 janela.setScene(scene);
                 janela.setResizable(false);
-                janela.initStyle(StageStyle.TRANSPARENT);
                 janela.show();
             } catch (IOException ex) {
                 
@@ -84,7 +67,7 @@ public class LoginController implements Initializable {
     }
     private boolean login(){
         boolean log=false;
-        EntityManagerFactory emf =Persistence.createEntityManagerFactory("COP",new PersistenceProperties().get());
+        EntityManagerFactory emf =Persistence.createEntityManagerFactory("COP");
         EntityManager em = emf.createEntityManager();
         Query query = em.createQuery("SELECT u FROM Usuario as u WHERE u.user = :name");
         query.setParameter("name", this.txtUser.getText());
@@ -94,7 +77,6 @@ public class LoginController implements Initializable {
             this.infoUser.setText("Sucess!");
             this.infoUser.setStyle("-fx-text-fill:green;");
             if(user.get(0).getSenha().equals(Hashing.sha256().hashString(this.txtPass.getText(), StandardCharsets.UTF_8).toString())){
-                this.type = user.get(0).getPermisao().equals("Adminstrador");
                 this.txtPass.setStyle("-fx-prompt-text-fill:green;-fx-text-fill:#353535;-jfx-focus-color:green;-jfx-unfocus-color:green;");
                 this.infoPass.setText("Sucess!");
                 this.infoPass.setStyle("-fx-text-fill:green;");

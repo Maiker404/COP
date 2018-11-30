@@ -1,11 +1,13 @@
 package br.edu.ifro.model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Tarefa implements Serializable {
@@ -14,57 +16,62 @@ public class Tarefa implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idTarefa;
     @Column  
-    private Integer idUsuario;
+    private Usuario Usuario;
     @Column  
-    private String Descri,dataLanc,dataExp;
+    private String nome;
+    @Column  
+    private String descri;
+    @Column  
+    private LocalDate dataLanc;
+    @Column  
+    private LocalDate dataExp;
+
     public Integer getIdTarefa() {
         return idTarefa;
     }
 
-   
     public void setIdTarefa(Integer idTarefa) {
         this.idTarefa = idTarefa;
     }
 
-   
+    public Usuario getUsuario() {
+        return Usuario;
+    }
+
+    public void setUsuario(Usuario Usuario) {
+        this.Usuario = Usuario;
+    }
+
     public String getDescri() {
-        return Descri;
+        return descri;
     }
 
-   
-    public void setDescri(String Descri) {
-        this.Descri = Descri;
+    public void setDescri(String descri) {
+        this.descri = descri;
     }
 
-   
-    public String getDataLanc() {
+    public LocalDate getDataLanc() {
         return dataLanc;
     }
 
-    
-    public void setDataLanc(String dataLanc) {
+    public void setDataLanc(LocalDate dataLanc) {
         this.dataLanc = dataLanc;
     }
 
-    
-    public String getDataExp() {
+    public LocalDate getDataExp() {
         return dataExp;
     }
 
-    
-    public void setDataExp(String dataExp) {
+    public void setDataExp(LocalDate dataExp) {
         this.dataExp = dataExp;
     }
 
-    
-    public Integer getIdUsuario() {
-        return idUsuario;
+    public String getNome() {
+        return nome;
     }
 
-    
-    public void setIdUsuario(Integer idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
-
 }
 

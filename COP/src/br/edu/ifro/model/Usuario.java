@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 @Entity
 //@Transient
-public class Usuario implements Serializable {
+public class Usuario extends Object implements Serializable  {
 
     @ManyToMany(mappedBy = "equipe")
     private List<Projeto> projetos;
@@ -42,6 +42,8 @@ public class Usuario implements Serializable {
     private String cep;
     @Column
     private String numero;
+     @Column
+    private String email;
     @Override
     public String toString(){
         return this.id+" - "+this.user;
@@ -149,5 +151,13 @@ public class Usuario implements Serializable {
 
     public void setNumero(String numero) {
         this.numero = numero;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
